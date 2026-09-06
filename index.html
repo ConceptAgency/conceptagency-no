@@ -75,6 +75,7 @@
     gap:clamp(28px,5vw,72px);
   }
   .brandmark{
+    text-decoration:none;
     font-variation-settings:'wdth' 112;
     font-weight:600;
     font-size:clamp(1.15rem,2vw,1.7rem);
@@ -85,6 +86,7 @@
     white-space:nowrap;
   }
   .brandmark:hover{opacity:1;color:var(--cobalt)}
+  .brandmark:focus-visible{outline:2px solid var(--cobalt);outline-offset:4px}
 
   /* ---------- hero ---------- */
   .hero{padding:14vh 0 10vh;border-bottom:1px solid var(--line)}
@@ -292,11 +294,11 @@
   <div class="wrap">
     <p class="logostrip-label">Brands we represent in the Nordics</p>
     <div class="logostrip-row">
-      <span class="brandmark">Izipizi</span>
-      <span class="brandmark">Hippie de Luxe</span>
-      <span class="brandmark">Nychair&nbsp;X</span>
-      <span class="brandmark">Dana Wyse</span>
-      <span class="brandmark">Milena Kling</span>
+      <a class="brandmark" href="/retail#izipizi">Izipizi</a>
+      <a class="brandmark" href="/retail#hippiedeluxe">Hippie de Luxe</a>
+      <a class="brandmark" href="/retail#nychairx">Nychair&nbsp;X</a>
+      <a class="brandmark" href="/retail#danawyse">Dana Wyse</a>
+      <a class="brandmark" href="/milena-kling">Milena Kling</a>
     </div>
   </div>
 </section>
