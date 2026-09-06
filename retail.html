@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Retail — Concept Agency</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,300..600;1,8..60,300..600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F6F6F3;
+    --ink:#131313;
+    --cobalt:#1B3FCC;
+    --stone:#8C8C85;
+    --line:#DCDCD6;
+    --white:#FFFFFF;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Archivo',sans-serif;
+    font-variation-settings:'wdth' 100;
+    font-weight:400;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1280px;margin:0 auto;padding:0 5vw}
+
+  header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(246,246,243,.92);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .wordmark{
+    font-variation-settings:'wdth' 125;
+    font-weight:700;font-size:15px;letter-spacing:.06em;
+    text-transform:uppercase;text-decoration:none;color:var(--ink);
+  }
+  .wordmark span{color:var(--cobalt)}
+  nav.links{display:flex;gap:28px}
+  nav.links a{
+    text-decoration:none;color:var(--ink);font-size:13px;
+    letter-spacing:.04em;text-transform:uppercase;font-weight:500;
+  }
+  nav.links a:hover,nav.links a.active{color:var(--cobalt)}
+  nav.links a:focus-visible{outline:2px solid var(--cobalt);outline-offset:3px}
+  .menu-toggle{display:none;background:none;border:0;cursor:pointer;padding:10px;margin:-10px}
+  .menu-toggle span{display:block;width:22px;height:2px;background:var(--ink);transition:transform .3s ease}
+  .menu-toggle span+span{margin-top:6px}
+  .menu-toggle[aria-expanded="true"] span:first-child{transform:translateY(4px) rotate(45deg)}
+  .menu-toggle[aria-expanded="true"] span:last-child{transform:translateY(-4px) rotate(-45deg)}
+  .menu-toggle:focus-visible{outline:2px solid var(--cobalt);outline-offset:3px}
+
+  .hero{padding:12vh 0 9vh;border-bottom:1px solid var(--line)}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:10px;
+    font-size:12px;letter-spacing:.14em;text-transform:uppercase;
+    font-weight:600;color:var(--cobalt);margin-bottom:28px;
+  }
+  .eyebrow::before{content:"";width:28px;height:2px;background:var(--cobalt);display:inline-block}
+  h1{
+    font-variation-settings:'wdth' 118;font-weight:600;
+    font-size:clamp(2.1rem,5vw,4.2rem);line-height:1.05;
+    letter-spacing:-.015em;max-width:20ch;
+  }
+  h1 em{font-family:'Source Serif 4',serif;font-style:italic;font-weight:400;color:var(--cobalt)}
+  .hero p{margin-top:32px;max-width:54ch;font-size:clamp(1rem,1.3vw,1.1rem);color:#3c3c38}
+
+  .brand{padding:11vh 0;border-bottom:1px solid var(--line)}
+  .brand.alt{background:var(--white)}
+  .brand-grid{
+    display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+    gap:6vw;align-items:center;
+  }
+  .brand-grid.flip .text{order:2}
+  .brand-grid.flip .visual{order:1}
+  .num{
+    font-size:12px;letter-spacing:.14em;text-transform:uppercase;
+    font-weight:600;color:var(--stone);margin-bottom:16px;
+  }
+  .brand h2{
+    font-variation-settings:'wdth' 118;font-weight:600;
+    font-size:clamp(1.8rem,3.4vw,2.8rem);line-height:1.05;
+    letter-spacing:-.012em;margin-bottom:8px;
+  }
+  .brand .origin{
+    font-family:'Source Serif 4',serif;font-style:italic;
+    font-size:16px;color:var(--cobalt);margin-bottom:22px;display:block;
+  }
+  .brand p{max-width:50ch;color:#3c3c38;font-size:15px;margin-bottom:14px}
+  .fit{
+    margin-top:24px;padding-top:20px;border-top:1px solid var(--line);
+    font-size:13px;color:var(--stone);max-width:46ch;
+  }
+  .fit strong{
+    display:block;font-size:11px;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--ink);margin-bottom:6px;font-weight:600;
+  }
+  .visual{
+    aspect-ratio:4/3;
+    display:flex;align-items:center;justify-content:center;
+    font-size:12px;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--stone);text-align:center;padding:20px;
+  }
+
+  .visual-img{
+    aspect-ratio:4/3;overflow:hidden;margin:0;
+    box-shadow:0 1px 0 var(--line);
+  }
+  .visual-img img{transition:transform 1.2s cubic-bezier(.2,.6,.2,1)}
+  .brand:hover .visual-img img{transform:scale(1.03)}
+  @media (prefers-reduced-motion:reduce){.brand:hover .visual-img img{transform:none}}
+  .v1{background:linear-gradient(160deg,#FCE8D8 0%,#F4C9A8 100%)}
+  .v2{background:linear-gradient(160deg,#E2E8DC 0%,#C7D2BE 100%)}
+  .v3{background:linear-gradient(160deg,#E8E2EE 0%,#CFC4DC 100%)}
+  .v4{background:linear-gradient(160deg,#EDEAE2 0%,#D9D4C8 100%)}
+  .v5{background:linear-gradient(160deg,#F6E0E4 0%,#E8BCC6 100%)}
+
+  .cta{padding:13vh 0}
+  .cta h2{
+    font-variation-settings:'wdth' 118;font-weight:600;
+    font-size:clamp(1.9rem,4.2vw,3.4rem);line-height:1.06;
+    letter-spacing:-.014em;max-width:18ch;margin-bottom:20px;
+  }
+  .cta p{max-width:50ch;color:#3c3c38;font-size:15px;margin-bottom:36px}
+  .btn{
+    display:inline-block;background:var(--ink);color:var(--paper);
+    text-decoration:none;font-size:13px;font-weight:600;
+    letter-spacing:.08em;text-transform:uppercase;
+    padding:18px 34px;transition:background .3s ease;
+  }
+  .btn:hover{background:var(--cobalt)}
+  .btn:focus-visible{outline:2px solid var(--cobalt);outline-offset:3px}
+
+  footer{border-top:1px solid var(--line);padding:40px 0}
+  .foot{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:16px}
+  .foot p{font-size:12px;color:var(--stone);letter-spacing:.04em}
+  .foot a{color:var(--stone);text-decoration:none}
+  .foot a:hover{color:var(--cobalt)}
+
+  @media (max-width:780px){
+    .menu-toggle{display:block}
+    nav.links{
+      display:none;
+      position:absolute;top:64px;left:0;right:0;
+      flex-direction:column;gap:0;
+      background:var(--paper);border-bottom:1px solid var(--line);
+      padding:4px 5vw 20px;
+    }
+    nav.links.open{display:flex}
+    nav.links a{padding:16px 0;border-top:1px solid var(--line);font-size:14px}
+    nav.links a:first-of-type{border-top:none}
+    .brand-grid{grid-template-columns:1fr;gap:36px}
+    .brand-grid.flip .text{order:1}
+    .brand-grid.flip .visual{order:2}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{transition:none!important;animation:none!important}
+    html{scroll-behavior:auto}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="wordmark" href="/" style="display:inline-flex;align-items:center;gap:12px"><img src="/images/ca-mark.png" alt="Concept Agency" style="height:30px;width:auto;display:block">Concept<span>&nbsp;Agency</span></a>
+    <button class="menu-toggle" aria-label="Menu" aria-expanded="false" onclick="var n=document.querySelector('nav.links');this.setAttribute('aria-expanded',n.classList.toggle('open'))"><span></span><span></span></button>
+    <nav class="links">
+      <a class='active' href='/retail'>For Retail</a>
+      <a href='/opticians'>For Opticians</a>
+      <a href="/#brands">Brands</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="eyebrow">For Retail</div>
+    <h1>Five brands. One standard: <em>worth shelf space.</em></h1>
+    <p>Every brand below was chosen for the same reason — it gives your store a point of view. From Parisian eyewear to a Japanese design icon, this is a portfolio built for concept stores, museum shops, interiors retailers and design-led boutiques across the Nordics.</p>
+  </div>
+</section>
+
+<section class="brand" id="izipizi">
+  <div class="wrap brand-grid">
+    <div class="text">
+      <div class="num">01 — Eyewear</div>
+      <h2>Izipizi</h2>
+      <span class="origin">Paris, France</span>
+      <p>Eyewear for every chapter of life — sunglasses, reading and screen glasses in a colour palette that sells itself at the counter. Designed in Paris, loved worldwide, and priced for repeat purchase.</p>
+      <p>From newborn to grandparent, Izipizi covers the entire family — which makes it one of the rare brands that performs equally well in a concept store, a bookshop and a museum gift shop.</p>
+      <div class="fit">
+        <strong>Right for</strong>
+        Concept stores · museum shops · bookshops · lifestyle boutiques · garden &amp; outdoor retail
+      </div>
+    </div>
+    <figure class="visual-img"><img src="/images/izipizi.jpg" alt="Izipizi — children wearing sunglasses" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></figure>
+  </div>
+</section>
+
+<section class="brand alt" id="hippiedeluxe">
+  <div class="wrap brand-grid flip">
+    <div class="text">
+      <div class="num">02 — Gift &amp; Interior</div>
+      <h2>Hippie de Luxe</h2>
+      <span class="origin">Sweden — formerly Ohlsson &amp; Lohaven</span>
+      <p>The Nordics' leading gift article house, representing 33 brands under one roof. Interiors and gift articles with personality — curated collections that let a single buyer fill a whole department with one order.</p>
+      <p>For the retailer, the value is efficiency: one relationship, one delivery, dozens of brands — all pre-selected for Nordic taste.</p>
+      <div class="fit">
+        <strong>Right for</strong>
+        Gift &amp; interior stores · department stores · garden centres · lifestyle retail
+      </div>
+    </div>
+    <figure class="visual-img"><img src="/images/hippiedeluxe.jpg" alt="Hippie de Luxe — interior gift articles" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></figure>
+  </div>
+</section>
+
+<section class="brand" id="liix">
+  <div class="wrap brand-grid">
+    <div class="text">
+      <div class="num">03 — Bicycle Accessories</div>
+      <h2>Liix</h2>
+      <span class="origin">Berlin, Germany</span>
+      <p>Bicycle accessories with Berlin attitude — bells, baskets, lights and add-ons that turn a practical purchase into a personal statement. Strong impulse-buy economics at the till.</p>
+      <p>Liix bridges the gap between bike shops and lifestyle retail: it sells wherever people care about how things look, not just how they work.</p>
+      <div class="fit">
+        <strong>Right for</strong>
+        Lifestyle boutiques · bike &amp; urban mobility stores · gift retail · concept stores
+      </div>
+    </div>
+    <figure class="visual-img"><img src="/images/liix.jpg" alt="Liix — bicycle bell detail" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></figure>
+  </div>
+</section>
+
+<section class="brand alt" id="nychairx">
+  <div class="wrap brand-grid flip">
+    <div class="text">
+      <div class="num">04 — Furniture</div>
+      <h2>Nychair X</h2>
+      <span class="origin">Japan — designed by Takeshi Nii, 1970</span>
+      <p>The Japanese folding lounge chair that earned a permanent place in design history. Made entirely in Japan since 1970 — foldable, repairable, and beautiful whether open or closed.</p>
+      <p>An anchor product: Nychair X gives a store a destination piece — the object customers come in to see, photograph and return to buy. Some things are bought once and kept for life.</p>
+      <div class="fit">
+        <strong>Right for</strong>
+        Design &amp; furniture stores · museum shops · interiors retail · architecture bookshops
+      </div>
+    </div>
+    <figure class="visual-img"><img src="/images/nychairx.jpg" alt="Nychair X lounge chair in a Japanese interior" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></figure>
+  </div>
+</section>
+
+<section class="brand" id="danawyse">
+  <div class="wrap brand-grid">
+    <div class="text">
+      <div class="num">05 — Concept Art</div>
+      <h2>Dana Wyse</h2>
+      <span class="origin">Paris / Vancouver</span>
+      <p>Limited-edition concept art with wit and bite — collectible pieces that sit at the intersection of art object and conversation starter. Each work is a small provocation, beautifully packaged.</p>
+      <p>Dana Wyse gives museum shops and galleries something genuinely rare: art-world credibility at a giftable price point.</p>
+      <div class="fit">
+        <strong>Right for</strong>
+        Museum shops · galleries · concept stores · design bookshops
+      </div>
+    </div>
+    <figure class="visual-img"><img src="/images/danawyse.jpg" alt="Dana Wyse — conceptual self-portrait" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></figure>
+  </div>
+</section>
+
+<section class="cta" id="contact">
+  <div class="wrap">
+    <h2>Build your selection.</h2>
+    <p>Tell us about your store and we'll propose a starting assortment — one brand or all five. Every account is handled personally, from first order to reorder.</p>
+    <form id="contactForm_retail" class="contact-form" style="margin-top:8px;max-width:520px;display:grid;gap:14px">
+      <input type="text" name="name" placeholder="Your name" required style="background:transparent;border:1px solid var(--line);color:var(--ink);padding:15px 16px;font-family:'Archivo',sans-serif;font-size:14px;width:100%">
+      <input type="text" name="company" placeholder="Store / company" style="background:transparent;border:1px solid var(--line);color:var(--ink);padding:15px 16px;font-family:'Archivo',sans-serif;font-size:14px;width:100%">
+      <input type="email" name="email" placeholder="Email" required style="background:transparent;border:1px solid var(--line);color:var(--ink);padding:15px 16px;font-family:'Archivo',sans-serif;font-size:14px;width:100%">
+      <textarea name="message" placeholder="What are you interested in?" rows="3" style="background:transparent;border:1px solid var(--line);color:var(--ink);padding:15px 16px;font-family:'Archivo',sans-serif;font-size:14px;width:100%;resize:vertical"></textarea>
+      <button type="submit" class="btn" style="border:none;cursor:pointer;justify-self:start">Start the conversation</button>
+      <p class="form-msg" style="display:none;font-size:14px;margin-top:4px"></p>
+    </form>
+    <script>
+    document.getElementById('contactForm_retail').addEventListener('submit', async function(e){
+      e.preventDefault();
+      var f=e.target, btn=f.querySelector('button'), msg=f.querySelector('.form-msg');
+      var data={}; new FormData(f).forEach(function(v,k){data[k]=v;});
+      data.source='conceptagency.no — retail page';
+      btn.disabled=true; btn.textContent='Sending…';
+      try{
+        await fetch('https://hooks.zapier.com/hooks/catch/20267965/431r5kg/',{method:'POST',body:JSON.stringify(data)});
+        f.querySelectorAll('input,textarea').forEach(function(i){i.style.display='none';});
+        btn.style.display='none';
+        msg.style.display='block'; msg.style.color='#2E7D43';
+        msg.textContent="Thank you — we'll be in touch within one business day.";
+      }catch(err){
+        btn.disabled=false; btn.textContent='Start the conversation';
+        msg.style.display='block'; msg.style.color='#B3463C';
+        msg.textContent='Something went wrong — call us instead: +47 934 64 432.';
+      }
+    });
+    </script>
+    <p style="margin-top:22px;font-size:14px;color:#3c3c38">Or call Erik Spade directly: <a href="tel:+4793464432" style="color:var(--ink);font-weight:600;text-decoration:underline;text-underline-offset:3px">+47 934 64 432</a></p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <p>© 2026 Concept Agency AS — Norway</p>
+    <p><a href="tel:+4793464432">+47 934 64 432</a> &nbsp;·&nbsp; <a href="mailto:info@conceptagency.no">info@conceptagency.no</a></p>
+    <p><a href="/">Home</a> &nbsp;·&nbsp; <a href="https://www.instagram.com/conceptagency_norway/" target="_blank" rel="noopener">Instagram</a> &nbsp;·&nbsp; <a href="https://www.linkedin.com/company/concept-agency-as/" target="_blank" rel="noopener">LinkedIn</a> &nbsp;·&nbsp; <a href="/privacy">Privacy</a></p>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,8 @@
+# Netlify manual-deploy artifacts
+deploy-*.zip
+.netlify/
+
+# Editor / OS cruft
+.DS_Store
+*.bak
+Thumbs.db

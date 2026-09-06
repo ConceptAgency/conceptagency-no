@@ -1,0 +1,8 @@
+# Old WordPress URLs -> new pages
+/about            /#brands                    301
+/ohlsson-lohaven  /retail.html#hippiedeluxe   301
+
+# Pretty URLs
+/retail     /retail.html     200
+/opticians  /opticians.html  200
+/privacy    /privacy.html    200
