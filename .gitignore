@@ -6,3 +6,6 @@ deploy-*.zip
 .DS_Store
 *.bak
 Thumbs.db
+
+# Print-ready catalogue masters (kept locally, never deployed)
+catalogue/source/
