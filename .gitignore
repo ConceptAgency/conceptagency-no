@@ -9,3 +9,6 @@ Thumbs.db
 
 # Print-ready catalogue masters (kept locally, never deployed)
 catalogue/source/
+
+# Working notes — never deployed
+notes/
