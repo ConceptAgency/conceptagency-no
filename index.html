@@ -408,6 +408,7 @@
   <div class="wrap">
     <h2>Let's find out if we fit.</h2>
     <form id="contactForm_index" class="contact-form" style="margin-top:8px;max-width:520px;display:grid;gap:14px">
+      <div aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden"><label>Leave this field empty <input type="text" name="ca_confirm" tabindex="-1" autocomplete="off"></label></div>
       <input type="text" name="name" placeholder="Your name" required style="background:transparent;border:1px solid var(--line);color:var(--ink);padding:15px 16px;font-family:'Archivo',sans-serif;font-size:14px;width:100%">
       <input type="text" name="company" placeholder="Store / company" style="background:transparent;border:1px solid var(--line);color:var(--ink);padding:15px 16px;font-family:'Archivo',sans-serif;font-size:14px;width:100%">
       <input type="email" name="email" placeholder="Email" required style="background:transparent;border:1px solid var(--line);color:var(--ink);padding:15px 16px;font-family:'Archivo',sans-serif;font-size:14px;width:100%">
@@ -416,14 +417,17 @@
       <p class="form-msg" style="display:none;font-size:14px;margin-top:4px"></p>
     </form>
     <script>
+    window.caT0=window.caT0||Date.now();
     document.getElementById('contactForm_index').addEventListener('submit', async function(e){
       e.preventDefault();
       var f=e.target, btn=f.querySelector('button'), msg=f.querySelector('.form-msg');
       var data={}; new FormData(f).forEach(function(v,k){data[k]=v;});
+      var bot=!!data.ca_confirm||(Date.now()-window.caT0)<3000; delete data.ca_confirm;
+      data.form='General contact';
       data.source='conceptagency.no — homepage';
       btn.disabled=true; btn.textContent='Sending…';
       try{
-        await fetch('https://hooks.zapier.com/hooks/catch/20267965/431r5kg/',{method:'POST',body:JSON.stringify(data)});
+        if(!bot) await fetch('https://hooks.zapier.com/hooks/catch/20267965/431r5kg/',{method:'POST',body:JSON.stringify(data)});
         f.querySelectorAll('input,textarea').forEach(function(i){i.style.display='none';});
         btn.style.display='none';
         msg.style.display='block'; msg.style.color='#2E7D43';

@@ -304,6 +304,7 @@
     <p>Izipizi is entering the optician channel with a dedicated collection addressing myopia — developed for practices, available only through practices. Official launch: 2027.</p>
     <p>We are assembling the founding group of Norwegian opticians now. Early-access practices get first allocation, launch support and introductory terms.</p>
     <form id="myopiaForm" style="margin-top:34px;max-width:520px;display:grid;gap:14px">
+      <div aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden"><label>Leave this field empty <input type="text" name="ca_confirm" tabindex="-1" autocomplete="off"></label></div>
       <input type="text" name="name" placeholder="Your name" required class="dark-field">
       <input type="text" name="practice" placeholder="Practice name" required class="dark-field">
       <input type="text" name="city" placeholder="City" required class="dark-field">
@@ -313,15 +314,18 @@
       <p id="myopiaMsg" style="display:none;font-size:14px;margin-top:6px"></p>
     </form>
     <script>
+    window.caT0=window.caT0||Date.now();
     document.getElementById('myopiaForm').addEventListener('submit', async function(e){
       e.preventDefault();
       var f = e.target, btn = f.querySelector('button'), msg = document.getElementById('myopiaMsg');
       var data = {};
       new FormData(f).forEach(function(v,k){ data[k]=v; });
+      var bot = !!data.ca_confirm || (Date.now()-window.caT0) < 3000; delete data.ca_confirm;
+      data.form = 'RX early access';
       data.source = 'conceptagency.no — opticians page';
       btn.disabled = true; btn.textContent = 'Sending…';
       try{
-        await fetch('https://hooks.zapier.com/hooks/catch/20267965/431r5kg/', {
+        if(!bot) await fetch('https://hooks.zapier.com/hooks/catch/20267965/431r5kg/', {
           method:'POST', body: JSON.stringify(data)
         });
         f.querySelectorAll('input').forEach(function(i){ i.style.display='none'; });
@@ -377,6 +381,7 @@
     <h2>Start with one concept. Or both.</h2>
     <p>Tell us about your practice and we'll propose a starting setup — display, assortment and terms. No volume commitments to begin.</p>
     <form id="contactForm_opticians" class="contact-form" style="margin-top:8px;max-width:520px;display:grid;gap:14px">
+      <div aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden"><label>Leave this field empty <input type="text" name="ca_confirm" tabindex="-1" autocomplete="off"></label></div>
       <input type="text" name="name" placeholder="Your name" required class="light-field">
       <input type="text" name="company" placeholder="Store / company" class="light-field">
       <input type="email" name="email" placeholder="Email" required class="light-field">
@@ -385,14 +390,17 @@
       <p class="form-msg" style="display:none;font-size:14px;margin-top:4px"></p>
     </form>
     <script>
+    window.caT0=window.caT0||Date.now();
     document.getElementById('contactForm_opticians').addEventListener('submit', async function(e){
       e.preventDefault();
       var f=e.target, btn=f.querySelector('button'), msg=f.querySelector('.form-msg');
       var data={}; new FormData(f).forEach(function(v,k){data[k]=v;});
+      var bot=!!data.ca_confirm||(Date.now()-window.caT0)<3000; delete data.ca_confirm;
+      data.form='General contact';
       data.source='conceptagency.no — opticians page';
       btn.disabled=true; btn.textContent='Sending…';
       try{
-        await fetch('https://hooks.zapier.com/hooks/catch/20267965/431r5kg/',{method:'POST',body:JSON.stringify(data)});
+        if(!bot) await fetch('https://hooks.zapier.com/hooks/catch/20267965/431r5kg/',{method:'POST',body:JSON.stringify(data)});
         f.querySelectorAll('input,textarea').forEach(function(i){i.style.display='none';});
         btn.style.display='none';
         msg.style.display='block'; msg.style.color='#2E7D43';
