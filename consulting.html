@@ -3,7 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For Opticians — Concept Agency</title>
+<title>Consulting — Fractional COO &amp; AI operations | Concept Agency</title>
+<meta name="description" content="Concept Agency Consulting: fractional COO and AI operations for owner-led companies in Norway. We connect your systems and put AI on top, led personally by Erik Spade.">
+<link rel="canonical" href="https://conceptagency.no/consulting">
+<link rel="alternate" hreflang="en" href="https://conceptagency.no/consulting">
+<link rel="alternate" hreflang="nb" href="https://conceptagency.no/raadgivning">
+<link rel="alternate" hreflang="x-default" href="https://conceptagency.no/consulting">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,300..600;1,8..60,300..600&display=swap" rel="stylesheet">
@@ -241,7 +246,39 @@
     *{transition:none!important;animation:none!important}
     html{scroll-behavior:auto}
   }
+
+  /* ---------- consulting page ---------- */
+  .hero-top{display:flex;justify-content:space-between;align-items:baseline;gap:24px;flex-wrap:wrap}
+  .lang{font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--stone);text-decoration:none;margin-bottom:28px}
+  .lang:hover{color:var(--cobalt)}
+  .lang:focus-visible{outline:2px solid var(--cobalt);outline-offset:3px}
+  h1{max-width:19ch}
+  h1,.block h2,.pipeline h2,.cta h2{text-wrap:balance}
+  .lines.two{grid-template-columns:repeat(2,1fr)}
+  .line-card{padding:32px 28px}
+  .line-card .k{display:block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--cobalt);margin-bottom:14px}
+  .line-card h3{font-size:1.2rem;margin-bottom:10px}
+  .line-card p{font-size:14px;color:#55554f}
+  .method{list-style:none;margin-top:44px;max-width:860px;border-top:1px solid rgba(255,255,255,.2)}
+  .method li{display:grid;grid-template-columns:56px minmax(0,.8fr) minmax(0,1.4fr);gap:20px;align-items:baseline;padding:22px 0;border-bottom:1px solid rgba(255,255,255,.2)}
+  .method .n{font-size:12px;letter-spacing:.14em;font-weight:600;color:#8FA3F2}
+  .method h3{font-variation-settings:'wdth' 118;font-weight:600;font-size:1.15rem;letter-spacing:-.005em}
+  .method p{margin:0;max-width:none;font-size:14px}
+  .scope-label{font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--stone);margin-bottom:16px}
+  .scope,.cv{list-style:none;border-top:1px solid var(--line)}
+  .scope li{padding:16px 0;border-bottom:1px solid var(--line);font-size:15px;color:#3c3c38}
+  .cv li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 24px;padding:16px 0;border-bottom:1px solid var(--line)}
+  .cv b{font-variation-settings:'wdth' 118;font-weight:600;font-size:1.05rem}
+  .cv .yr{font-size:12px;letter-spacing:.1em;color:var(--stone);font-weight:500;text-align:right;padding-top:4px}
+  .cv .role{grid-column:1/-1;font-family:'Source Serif 4',serif;font-style:italic;font-size:15px;color:#3c3c38}
+  .grid2.top{align-items:start}
+  @media (max-width:780px){
+    .lines.two{grid-template-columns:1fr}
+    .method li{grid-template-columns:40px 1fr;gap:6px 12px}
+    .method p{grid-column:2}
+  }
 </style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "ProfessionalService", "@id": "https://conceptagency.no/consulting#service", "name": "Concept Agency Consulting", "url": "https://conceptagency.no/consulting", "inLanguage": "en", "description": "Fractional COO and AI operations for owner-led small and mid-sized companies. Engagements: AI sprint, fractional COO retainer, growth strategy, AI search visibility audit.", "telephone": "+47 934 64 432", "email": "info@conceptagency.no", "address": {"@type": "PostalAddress", "streetAddress": "Sarbuvollveien 38", "postalCode": "1363", "addressLocality": "Høvik", "addressCountry": "NO"}, "areaServed": {"@type": "Country", "name": "Norway"}, "parentOrganization": {"@type": "Organization", "name": "Concept Agency AS", "url": "https://conceptagency.no/"}, "founder": {"@id": "https://conceptagency.no/#erik-spade"}, "knowsAbout": ["Fractional COO", "AI implementation", "AI operations", "Systems integration", "Growth strategy", "Generative engine optimisation"]}, {"@type": "Person", "@id": "https://conceptagency.no/#erik-spade", "name": "Erik Spade", "jobTitle": "Managing Partner", "worksFor": {"@type": "Organization", "name": "Concept Agency AS", "url": "https://conceptagency.no/"}}]}</script>
 </head>
 <body>
 
@@ -251,8 +288,8 @@
     <button class="menu-toggle" aria-label="Menu" aria-expanded="false" onclick="var n=document.querySelector('nav.links');this.setAttribute('aria-expanded',n.classList.toggle('open'))"><span></span><span></span></button>
     <nav class="links">
       <a href='/retail'>For Retail</a>
-      <a class='active' href='/opticians'>For Opticians</a>
-      <a href='/consulting'>Consulting</a>
+      <a href='/opticians'>For Opticians</a>
+      <a class='active' href='/consulting'>Consulting</a>
       <a href="/#brands">Brands</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -261,150 +298,126 @@
 
 <section class="hero">
   <div class="wrap">
-    <div class="eyebrow">For Opticians</div>
-    <h1>New revenue inside your practice — <em>without new complexity.</em></h1>
-    <p>Two proven concepts, one partner. Ready-made Izipizi frames that sell from the shelf while patients wait for their prescription, and an insurance programme that turns every sale into a lasting customer relationship. Both are running today in optician practices across Norway.</p>
+    <div class="hero-top">
+      <div class="eyebrow">Concept Agency Consulting</div>
+      <a class="lang" href="/raadgivning" lang="nb" hreflang="nb">Norsk</a>
+    </div>
+    <h1>A part-time COO who makes AI <em>part of the operation.</em></h1>
+    <p>Concept Agency Consulting works with owner-led companies that have grown faster than their systems. Erik Spade steps in as fractional COO, connects the tools you already run, and puts AI on top, so the operation gets smarter as it scales.</p>
   </div>
 </section>
 
-<section class="block" id="izipizi">
+<section class="block" id="situation">
   <div class="wrap">
-    <div class="section-label">01 — Ready-Made Eyewear</div>
-    <h2>Izipizi for opticians</h2>
-    <span class="origin">Paris, France — selling in Norwegian optician practices today</span>
-    <p>Izipizi fills the gap your prescription business doesn't reach: the impulse purchase, the second pair, the gift, the child's first sunglasses. Strong margins, compact display footprint, and a colour-driven collection that refreshes itself twice a year.</p>
-    <p>Six lines, all ready to sell from day one:</p>
+    <div class="section-label">01 — The situation</div>
+    <h2>Growth outruns the systems.</h2>
+    <span class="origin">What we see in most companies with 5 to 50 people</span>
+    <p>The order platform, the accounting system and the CRM each hold part of the truth, and spreadsheets fill the gaps. The owner is the integration layer. Everyone has tried AI; few have made it part of how the work gets done.</p>
+    <p>A full-time COO is early and expensive. A systems vendor installs what it is asked to install. What is missing is someone senior who decides what to connect, in what order, and where AI earns its place.</p>
+  </div>
+</section>
 
-    <div class="lines">
-      <div class="line-card">
-        <h3>Sun</h3>
-        <p>The core collection — UV-protective sunglasses in the palette Izipizi is known for.</p>
-      </div>
-      <div class="line-card">
-        <h3>Reading</h3>
-        <p>Ready-made readers in every strength — the natural add-on sale at the counter.</p>
-      </div>
-      <div class="line-card">
-        <h3>Reading Sun</h3>
-        <p>Sun readers — two needs, one frame. A category most practices don't stock yet.</p>
-      </div>
-      <div class="line-card">
-        <h3>Screen</h3>
-        <p>Blue-light filtering for screen hours — relevant to nearly every patient you see.</p>
-      </div>
-      <div class="line-card">
-        <h3>Kids Sun</h3>
-        <p>Sunglasses for children from infancy — and a reason for the whole family to come in.</p>
-      </div>
-      <div class="line-card">
-        <h3>Active</h3>
-        <p>Sport-ready frames for running, cycling and life outdoors. Grip, fit, performance.</p>
-      </div>
+<section class="pipeline" id="approach">
+  <div class="wrap">
+    <div class="eyebrow">02 — The approach</div>
+    <h2>We decide what to build, <em>and in what order.</em></h2>
+    <p>The value is not in running the implementation. It is in knowing which integrations to build, in what sequence, and how to put AI on top so the operation gets smarter as it scales.</p>
+    <ol class="method">
+      <li><span class="n">01</span><h3>Connect the systems</h3><p>One flow of data between order platform, accounting and CRM. The same number is typed once.</p></li>
+      <li><span class="n">02</span><h3>Put AI on top</h3><p>On your own data, in the tasks where it removes the most manual hours.</p></li>
+      <li><span class="n">03</span><h3>Make it visible</h3><p>Cash, margin and runway in one view the owner can read in a minute.</p></li>
+      <li><span class="n">04</span><h3>Make it routine</h3><p>Workshops, written guidelines and an internal owner, so it keeps running without us.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="block alt" id="models">
+  <div class="wrap">
+    <div class="section-label">03 — Ways to work together</div>
+    <h2>Start small. Stay as long as it pays.</h2>
+    <span class="origin">Scope and price agreed before we start</span>
+    <div class="lines two">
+      <div class="line-card"><span class="k">2–4 weeks</span><h3>AI sprint</h3><p>A diagnostic of systems, data and daily work that ends in a prioritised roadmap. The usual place to start.</p></div>
+      <div class="line-card"><span class="k">Retainer</span><h3>Fractional COO &amp; AI operations</h3><p>A fixed number of days each month. Erik takes responsibility for operations, systems and AI implementation alongside the owner.</p></div>
+      <div class="line-card"><span class="k">Project</span><h3>Growth strategy</h3><p>Where the company stands, what the upside is worth, and which levers to pull in which order.</p></div>
+      <div class="line-card"><span class="k">Fixed scope</span><h3>AI search visibility audit</h3><p>How your company appears in AI assistants and in Google’s AI answers, and what to change.</p></div>
     </div>
   </div>
 </section>
 
-<section class="pipeline" id="myopia">
+<section class="block" id="clients">
   <div class="wrap">
-    <div class="eyebrow">02 — Arriving 2027</div>
-    <h2>Izipizi RX collection. <em>Be first in line.</em></h2>
-    <p>Izipizi is entering the optician channel with a dedicated collection addressing myopia — developed for practices, available only through practices. Official launch: 2027.</p>
-    <p>We are assembling the founding group of Norwegian opticians now. Early-access practices get first allocation, launch support and introductory terms.</p>
-    <form id="myopiaForm" style="margin-top:34px;max-width:520px;display:grid;gap:14px">
-      <div aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden"><label>Leave this field empty <input type="text" name="ca_confirm" tabindex="-1" autocomplete="off"></label></div>
-      <input type="text" name="name" placeholder="Your name" required class="dark-field">
-      <input type="text" name="practice" placeholder="Practice name" required class="dark-field">
-      <input type="text" name="city" placeholder="City" required class="dark-field">
-      <input type="email" name="email" placeholder="Email" required class="dark-field">
-      <input type="tel" name="phone" placeholder="Phone (optional)" class="dark-field">
-      <button type="submit" class="btn-light" style="border:none;cursor:pointer;margin-top:8px;justify-self:start">Join the early-access list</button>
-      <p id="myopiaMsg" style="display:none;font-size:14px;margin-top:6px"></p>
-    </form>
-    <script>
-    window.caT0=window.caT0||Date.now();
-    document.getElementById('myopiaForm').addEventListener('submit', async function(e){
-      e.preventDefault();
-      var f = e.target, btn = f.querySelector('button'), msg = document.getElementById('myopiaMsg');
-      var data = {};
-      new FormData(f).forEach(function(v,k){ data[k]=v; });
-      var bot = !!data.ca_confirm || (Date.now()-window.caT0) < 3000; delete data.ca_confirm;
-      data.form = 'RX early access';
-      data.source = 'conceptagency.no — opticians page';
-      btn.disabled = true; btn.textContent = 'Sending…';
-      try{
-        if(!bot) await fetch('https://hooks.zapier.com/hooks/catch/20267965/431r5kg/', {
-          method:'POST', body: JSON.stringify(data)
-        });
-        f.querySelectorAll('input').forEach(function(i){ i.style.display='none'; });
-        btn.style.display='none';
-        msg.style.display='block'; msg.style.color='#9FE8B0';
-        msg.textContent = "You're on the list. We'll be in touch personally before launch.";
-      }catch(err){
-        btn.disabled = false; btn.textContent = 'Join the early-access list';
-        msg.style.display='block'; msg.style.color='#F2A6A6';
-        msg.textContent = 'Something went wrong — call us instead: +47 934 64 432.';
-      }
-    });
-    </script>
-    <p style="margin-top:18px;font-size:14px;color:#C9C9C2">Questions first? Call Erik Spade: <a href="tel:+4793464432" style="color:var(--paper);font-weight:600;text-decoration:underline;text-underline-offset:3px">+47 934 64 432</a></p>
+    <div class="section-label">04 — Who we work with</div>
+    <h2>Built for owner-led companies.</h2>
+    <span class="origin">Two kinds of client, one method</span>
+    <div class="lines two">
+      <div class="line-card"><h3>Owner-led companies</h3><p>5 to 50 people, in any sector, that want AI in daily use and operations that no longer depend on one person.</p></div>
+      <div class="line-card"><h3>Professional services firms</h3><p>Architects, agencies and consultancies, where time is the product and every manual hour is margin.</p></div>
+    </div>
   </div>
 </section>
 
-<section class="block alt" id="insurance">
-  <div class="wrap grid2">
+<section class="block alt" id="case">
+  <div class="wrap grid2 top">
     <div>
-      <div class="section-label">03 — Aftercare</div>
-      <h2>Eyewear insurance</h2>
-      <span class="origin">Running in optician practices across Norway</span>
-      <p>Glasses break, get lost, get scratched — and every incident is a moment your customer decides whether to come back to you or go elsewhere. An insurance programme attached at the point of sale keeps that decision in your practice.</p>
-      <p>For the customer: peace of mind on a significant purchase. For you: recurring contact, repeat visits and a reason to be the practice they never leave. Setup is handled by us — training, materials and ongoing support included.</p>
+      <div class="section-label">05 — In practice</div>
+      <h2>A Nordic multi-brand distributor</h2>
+      <span class="origin">Fractional COO since 2025</span>
+      <p>A wholesale company with several international brands and a small team, selling to retailers and, more recently, direct to consumers. Erik serves as part-time COO alongside the owners.</p>
     </div>
-    <figure style="aspect-ratio:4/5;max-height:560px;width:auto;overflow:hidden;margin:0 auto"><a href="https://tryg.21optical.com/no/apply-new-customers/" target="_blank" rel="noopener" aria-label="Søk om FullCareVision-avtale hos Tryg" style="display:block;width:100%;height:100%"><img src="/images/fullcarevision.jpg" alt="Tryg FullCareVision — Trygghet, som følger synet ditt" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></a></figure>
+    <div>
+      <div class="scope-label">Scope of work</div>
+      <ul class="scope">
+        <li>Integration between the B2B order platform and the accounting system</li>
+        <li>A liquidity and runway dashboard built on both</li>
+        <li>AI implementation, led together with an internal project team</li>
+        <li>A team workshop, and a clear policy for sharing documents internally and with clients</li>
+        <li>A four-step roadmap: integrate the systems, put AI on top, enter a second market, scale content production</li>
+      </ul>
+    </div>
   </div>
 </section>
 
-<section class="proof">
-  <div class="wrap">
-    <div class="section-label">Where this stands today</div>
-    <div class="proof-grid">
-      <div class="stat">
-        <div class="num">200</div>
-        <div class="lab">Doors across Norway carrying our brands today</div>
-      </div>
-      <div class="stat">
-        <div class="num">50<sup>+</sup></div>
-        <div class="lab">Norwegian optician practices working with us today</div>
-      </div>
-      <div class="stat">
-        <div class="num">1</div>
-        <div class="lab">Point of contact — every account handled personally, from first order to reorder</div>
-      </div>
+<section class="block" id="erik">
+  <div class="wrap grid2 top">
+    <div>
+      <div class="section-label">06 — Who you work with</div>
+      <h2>An operator, not a theorist.</h2>
+      <span class="origin">Erik Spade, Managing Partner</span>
+      <p>Erik has co-founded three companies and spent three decades building businesses in the Nordics. He knows what a growing company can afford to get wrong.</p>
+      <p>Concept Agency is the live lab. The agency runs its own CRM, accounting, lead handling and website on an AI-native stack. We use it on ourselves first.</p>
     </div>
+    <ul class="cv">
+      <li><b>Concept Agency</b><span class="yr">Today</span><span class="role">Managing Partner</span></li>
+      <li><b>Highered</b><span class="yr">2015 — 2024</span><span class="role">Co-founder, Sales Director</span></li>
+      <li><b>Webcruiter</b><span class="yr">2003 — 2015</span><span class="role">Co-founder, VP Sales &amp; Marketing. From 3 to 40 employees, MNOK 50 in revenue, acquired 2018.</span></li>
+      <li><b>JCDecaux Norge</b><span class="yr">1998 — 2000</span><span class="role">Founding partner</span></li>
+    </ul>
   </div>
 </section>
 
 <section class="cta" id="contact">
   <div class="wrap">
-    <h2>Start with one concept. Or both.</h2>
-    <p>Tell us about your practice and we'll propose a starting setup — display, assortment and terms. No volume commitments to begin.</p>
-    <form id="contactForm_opticians" class="contact-form" style="margin-top:8px;max-width:520px;display:grid;gap:14px">
+    <h2>Tell us what you would fix first.</h2>
+    <p>A first conversation costs nothing. If we can help, you get a proposal with scope and price. If we can’t, we say so.</p>
+    <form id="contactForm_consulting" class="contact-form" style="margin-top:8px;max-width:520px;display:grid;gap:14px">
       <div aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden"><label>Leave this field empty <input type="text" name="ca_confirm" tabindex="-1" autocomplete="off"></label></div>
       <input type="text" name="name" placeholder="Your name" required class="light-field">
-      <input type="text" name="company" placeholder="Store / company" class="light-field">
+      <input type="text" name="company" placeholder="Company" class="light-field">
       <input type="email" name="email" placeholder="Email" required class="light-field">
-      <textarea name="message" placeholder="What are you interested in?" rows="3" class="light-field" style="resize:vertical"></textarea>
+      <textarea name="message" placeholder="What would you fix first?" rows="3" class="light-field" style="resize:vertical"></textarea>
       <button type="submit" class="btn" style="border:none;cursor:pointer;justify-self:start">Start the conversation</button>
       <p class="form-msg" style="display:none;font-size:14px;margin-top:4px"></p>
     </form>
     <script>
     window.caT0=window.caT0||Date.now();
-    document.getElementById('contactForm_opticians').addEventListener('submit', async function(e){
+    document.getElementById('contactForm_consulting').addEventListener('submit', async function(e){
       e.preventDefault();
       var f=e.target, btn=f.querySelector('button'), msg=f.querySelector('.form-msg');
       var data={}; new FormData(f).forEach(function(v,k){data[k]=v;});
       var bot=!!data.ca_confirm||(Date.now()-window.caT0)<3000; delete data.ca_confirm;
-      data.form='General contact';
-      data.source='conceptagency.no — opticians page';
+      data.form='Consulting';
+      data.source='conceptagency.no — consulting page (EN)';
       btn.disabled=true; btn.textContent='Sending…';
       try{
         if(!bot) await fetch('https://hooks.zapier.com/hooks/catch/20267965/431r5kg/',{method:'POST',body:JSON.stringify(data)});

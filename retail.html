@@ -42,7 +42,8 @@
     text-transform:uppercase;text-decoration:none;color:var(--ink);
   }
   .wordmark span{color:var(--cobalt)}
-  nav.links{display:flex;gap:28px}
+  nav.links{display:flex;gap:clamp(16px,2.2vw,28px)}
+  nav.links a{white-space:nowrap}
   nav.links a{
     text-decoration:none;color:var(--ink);font-size:13px;
     letter-spacing:.04em;text-transform:uppercase;font-weight:500;
@@ -169,6 +170,11 @@
     .brand-grid.flip .text{order:1}
     .brand-grid.flip .visual{order:2}
   }
+  @media (min-width:781px) and (max-width:920px){
+    nav.links{gap:14px}
+    nav.links a{font-size:12px;letter-spacing:.02em}
+    .wordmark{font-size:13px;letter-spacing:.04em}
+  }
   @media (prefers-reduced-motion:reduce){
     *{transition:none!important;animation:none!important}
     html{scroll-behavior:auto}
@@ -184,6 +190,7 @@
     <nav class="links">
       <a class='active' href='/retail'>For Retail</a>
       <a href='/opticians'>For Opticians</a>
+      <a href='/consulting'>Consulting</a>
       <a href="/#brands">Brands</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -194,7 +201,7 @@
   <div class="wrap">
     <div class="eyebrow">For Retail</div>
     <h1>A short list. One standard: <em>worth shelf space.</em></h1>
-    <p>Every brand below was chosen for the same reason — it gives your store a point of view. From Parisian eyewear to a Japanese design icon and one-off Berlin glass, this is a portfolio built for concept stores, museum shops, interiors retailers and design-led boutiques across the Nordics.</p>
+    <p>Every brand below was chosen for the same reason — it gives your store a point of view. From Parisian eyewear to a Japanese design icon and one-off Berlin glass, this is a portfolio built for concept stores, museum shops, interiors retailers and design-led boutiques across the Nordics. Today our brands are carried by 200 stores and optician practices across Norway.</p>
   </div>
 </section>
 

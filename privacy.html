@@ -43,7 +43,8 @@
     text-transform:uppercase;text-decoration:none;color:var(--ink);
   }
   .wordmark span{color:var(--cobalt)}
-  nav.links{display:flex;gap:28px}
+  nav.links{display:flex;gap:clamp(16px,2.2vw,28px)}
+  nav.links a{white-space:nowrap}
   nav.links a{
     text-decoration:none;color:var(--ink);font-size:13px;
     letter-spacing:.04em;text-transform:uppercase;font-weight:500;
@@ -122,6 +123,11 @@
     nav.links a{padding:16px 0;border-top:1px solid var(--line);font-size:14px}
     nav.links a:first-of-type{border-top:none}
   }
+  @media (min-width:781px) and (max-width:920px){
+    nav.links{gap:14px}
+    nav.links a{font-size:12px;letter-spacing:.02em}
+    .wordmark{font-size:13px;letter-spacing:.04em}
+  }
   @media (prefers-reduced-motion:reduce){
     *{transition:none!important;animation:none!important}
     html{scroll-behavior:auto}
@@ -137,6 +143,7 @@
     <nav class="links">
       <a href='/retail'>For Retail</a>
       <a href='/opticians'>For Opticians</a>
+      <a href='/consulting'>Consulting</a>
       <a href="/#brands">Brands</a>
       <a href="/#contact">Contact</a>
     </nav>

@@ -46,7 +46,8 @@
     text-transform:uppercase;text-decoration:none;color:var(--ink);
   }
   .wordmark span{color:var(--cobalt)}
-  nav.links{display:flex;gap:28px}
+  nav.links{display:flex;gap:clamp(16px,2.2vw,28px)}
+  nav.links a{white-space:nowrap}
   nav.links a{
     text-decoration:none;color:var(--ink);font-size:13px;
     letter-spacing:.04em;text-transform:uppercase;font-weight:500;
@@ -194,6 +195,9 @@
     letter-spacing:-.005em;
   }
   blockquote em{font-style:italic;color:var(--cobalt)}
+  .consult-row{grid-template-columns:auto minmax(0,1fr) auto;gap:40px}
+  .hero-stats{margin-top:9vh;padding-top:6vh;border-top:1px solid var(--line)}
+  .proof .section-label + blockquote{margin-top:0}
   .attrib{margin-top:24px;font-size:13px;letter-spacing:.06em;text-transform:uppercase;font-weight:500;color:var(--stone)}
 
   /* ---------- founder ---------- */
@@ -246,6 +250,8 @@
     .panel + .panel{border-left:none;border-top:1px solid var(--line)}
     .panel{min-height:46vh}
     .proof-grid{grid-template-columns:1fr;gap:48px}
+    .consult-row{grid-template-columns:1fr;gap:6px}
+    .hero-stats{gap:30px;margin-top:6vh;padding-top:5vh}
     .founder-grid{grid-template-columns:1fr;gap:40px}
     .feature-grid{grid-template-columns:1fr!important;gap:40px}
     .brand-row{grid-template-columns:1fr;gap:6px}
@@ -260,6 +266,11 @@
     nav.links.open{display:flex}
     nav.links a{padding:16px 0;border-top:1px solid var(--line);font-size:14px}
     nav.links a:first-of-type{border-top:none}
+  }
+  @media (min-width:781px) and (max-width:920px){
+    nav.links{gap:14px}
+    nav.links a{font-size:12px;letter-spacing:.02em}
+    .wordmark{font-size:13px;letter-spacing:.04em}
   }
   @media (prefers-reduced-motion:reduce){
     *{transition:none!important;animation:none!important}
@@ -276,6 +287,7 @@
     <nav class="links">
       <a href='/retail'>For Retail</a>
       <a href='/opticians'>For Opticians</a>
+      <a href='/consulting'>Consulting</a>
       <a href="#brands">Brands</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -287,6 +299,20 @@
     <div class="eyebrow">Izipizi Global Agent of the Year</div>
     <h1>We bring the world's most <em>considered</em> brands to the Nordics.</h1>
     <p class="standfirst">Concept Agency is a curated B2B house in Norway. We select a small number of design-led brands and build them lasting homes — in the best concept stores, museum shops and optician practices in the Nordics.</p>
+    <div class="proof-grid hero-stats">
+      <div class="stat">
+        <div class="num">200</div>
+        <div class="lab">Doors across Norway — concept stores, museum shops and optician practices</div>
+      </div>
+      <div class="stat">
+        <div class="num">50<sup>+</sup></div>
+        <div class="lab">Optician practices working with us today</div>
+      </div>
+      <div class="stat">
+        <div class="num">№1</div>
+        <div class="lab">Izipizi agent worldwide — recognised globally in 2026</div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -373,21 +399,6 @@
 <section class="proof">
   <div class="wrap">
     <div class="section-label">Why partners choose us</div>
-    <div class="proof-grid">
-      <div class="stat">
-        <div class="num">150<sup>+</sup></div>
-        <div class="lab">Active resellers across Norway — lifestyle retail and opticians</div>
-      </div>
-      <div class="stat">
-        <div class="num">200<sup>%</sup></div>
-        <div class="lab">Growth in opticians offering Izipizi in the last 12 months</div>
-      </div>
-      <div class="stat">
-        <div class="num">№1</div>
-        <div class="lab">Izipizi agent worldwide — recognised globally in 2026</div>
-      </div>
-    </div>
-
     <blockquote>"Concept Agency is a trusted <em>partner</em> — not only a supplier."</blockquote>
     <div class="attrib">PoMo — a Museum of Modern and Contemporary Art</div>
   </div>
@@ -401,6 +412,17 @@
       <p>We say no more often than we say yes. A brand enters our portfolio only when we believe it deserves a permanent place on Nordic shelves — and when we know exactly whose shelves those are.</p>
       <div class="sig">Erik Spade<small>Managing Partner, Concept Agency</small></div>
     </div>
+  </div>
+</section>
+
+<section class="brands" id="consulting" style="padding:10vh 0">
+  <div class="wrap">
+    <div class="section-label">Concept Agency Consulting — The same experience, applied to your business</div>
+    <a class="brand-row consult-row" href="/consulting">
+      <h3>Fractional COO &amp; AI operations</h3>
+      <span class="cat">For owner-led companies that have outgrown their routines</span>
+      <span class="origin">See how it works →</span>
+    </a>
   </div>
 </section>
 

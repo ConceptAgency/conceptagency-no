@@ -6,3 +6,11 @@
 /retail     /retail.html     200
 /opticians  /opticians.html  200
 /privacy    /privacy.html    200
+/consulting  /consulting.html  200
+/raadgivning  /raadgivning.html  200
+
+# Aliases people may type
+/consultancy  /consulting  301
+/advisory     /consulting  301
+/radgivning   /raadgivning  301
+/rådgivning   /raadgivning  301

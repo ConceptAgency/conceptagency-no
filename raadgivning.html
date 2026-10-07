@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rådgivning — Innleid COO og KI i driften | Concept Agency</title>
+<meta name="description" content="Concept Agency Consulting: innleid COO (fractional COO) og KI-rådgivning for eierledede bedrifter. Vi kobler systemene og legger KI på toppen, ledet personlig av Erik Spade.">
+<link rel="canonical" href="https://conceptagency.no/raadgivning">
+<link rel="alternate" hreflang="en" href="https://conceptagency.no/consulting">
+<link rel="alternate" hreflang="nb" href="https://conceptagency.no/raadgivning">
+<link rel="alternate" hreflang="x-default" href="https://conceptagency.no/consulting">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,300..600;1,8..60,300..600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F6F6F3;
+    --ink:#131313;
+    --cobalt:#1B3FCC;
+    --stone:#8C8C85;
+    --line:#DCDCD6;
+    --white:#FFFFFF;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Archivo',sans-serif;
+    font-variation-settings:'wdth' 100;
+    font-weight:400;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1280px;margin:0 auto;padding:0 5vw}
+
+  header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(246,246,243,.92);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .wordmark{
+    font-variation-settings:'wdth' 125;
+    font-weight:700;font-size:15px;letter-spacing:.06em;
+    text-transform:uppercase;text-decoration:none;color:var(--ink);
+  }
+  .wordmark span{color:var(--cobalt)}
+  nav.links{display:flex;gap:clamp(16px,2.2vw,28px)}
+  nav.links a{white-space:nowrap}
+  nav.links a{
+    text-decoration:none;color:var(--ink);font-size:13px;
+    letter-spacing:.04em;text-transform:uppercase;font-weight:500;
+  }
+  nav.links a:hover,nav.links a.active{color:var(--cobalt)}
+  nav.links a:focus-visible{outline:2px solid var(--cobalt);outline-offset:3px}
+  .menu-toggle{display:none;background:none;border:0;cursor:pointer;padding:10px;margin:-10px}
+  .menu-toggle span{display:block;width:22px;height:2px;background:var(--ink);transition:transform .3s ease}
+  .menu-toggle span+span{margin-top:6px}
+  .menu-toggle[aria-expanded="true"] span:first-child{transform:translateY(4px) rotate(45deg)}
+  .menu-toggle[aria-expanded="true"] span:last-child{transform:translateY(-4px) rotate(-45deg)}
+  .menu-toggle:focus-visible{outline:2px solid var(--cobalt);outline-offset:3px}
+
+  .hero{padding:12vh 0 9vh;border-bottom:1px solid var(--line)}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:10px;
+    font-size:12px;letter-spacing:.14em;text-transform:uppercase;
+    font-weight:600;color:var(--cobalt);margin-bottom:28px;
+  }
+  .eyebrow::before{content:"";width:28px;height:2px;background:var(--cobalt);display:inline-block}
+  h1{
+    font-variation-settings:'wdth' 118;font-weight:600;
+    font-size:clamp(2.1rem,5vw,4.2rem);line-height:1.05;
+    letter-spacing:-.015em;max-width:20ch;
+  }
+  h1 em{font-family:'Source Serif 4',serif;font-style:italic;font-weight:400;color:var(--cobalt)}
+  .hero p{margin-top:32px;max-width:54ch;font-size:clamp(1rem,1.3vw,1.1rem);color:#3c3c38}
+
+  .section-label{
+    font-size:12px;letter-spacing:.14em;text-transform:uppercase;
+    font-weight:600;color:var(--stone);margin-bottom:48px;
+  }
+
+  .block{padding:11vh 0;border-bottom:1px solid var(--line)}
+  .block.alt{background:var(--white)}
+  .block h2{
+    font-variation-settings:'wdth' 118;font-weight:600;
+    font-size:clamp(1.8rem,3.4vw,2.8rem);line-height:1.05;
+    letter-spacing:-.012em;margin-bottom:8px;
+  }
+  .block .origin{
+    font-family:'Source Serif 4',serif;font-style:italic;
+    font-size:16px;color:var(--cobalt);margin-bottom:22px;display:block;
+  }
+  .block p{max-width:54ch;color:#3c3c38;font-size:15px;margin-bottom:14px}
+
+  .lines{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:1px;
+    background:var(--line);border:1px solid var(--line);margin-top:48px;
+  }
+  .line-card{
+    background:var(--paper);padding:28px 24px;
+  }
+  .block.alt .line-card{background:var(--white)}
+  .line-card h3{
+    font-variation-settings:'wdth' 118;font-weight:600;
+    font-size:1.1rem;letter-spacing:-.005em;margin-bottom:8px;
+  }
+  .line-card p{font-size:13px;color:var(--stone);margin:0;max-width:none}
+
+  .pipeline{
+    background:var(--ink);color:var(--paper);
+    padding:12vh 0;border-bottom:1px solid var(--line);
+  }
+  .pipeline .eyebrow{color:#8FA3F2}
+  .pipeline .eyebrow::before{background:#8FA3F2}
+  .pipeline h2{
+    font-variation-settings:'wdth' 118;font-weight:600;
+    font-size:clamp(1.9rem,4vw,3.2rem);line-height:1.06;
+    letter-spacing:-.014em;margin-bottom:22px;max-width:20ch;
+  }
+  .pipeline h2 em{font-family:'Source Serif 4',serif;font-style:italic;font-weight:400;color:#8FA3F2}
+  .pipeline p{max-width:52ch;color:#C9C9C2;font-size:15px;margin-bottom:14px}
+  .btn-light{
+    display:inline-block;background:var(--paper);color:var(--ink);
+    text-decoration:none;font-size:13px;font-weight:600;
+    letter-spacing:.08em;text-transform:uppercase;
+    padding:18px 34px;margin-top:26px;transition:background .3s ease,color .3s ease;
+  }
+  .btn-light:hover{background:var(--cobalt);color:var(--paper)}
+  .btn-light:focus-visible{outline:2px solid var(--paper);outline-offset:3px}
+
+
+  .dark-field{
+    background:rgba(255,255,255,.07);
+    border:1px solid rgba(255,255,255,.45);
+    color:var(--paper);
+    padding:16px 18px;
+    font-family:'Archivo',sans-serif;
+    font-size:15px;width:100%;
+    transition:border-color .25s ease, background .25s ease;
+  }
+  .dark-field::placeholder{color:rgba(255,255,255,.65)}
+  .dark-field:focus{
+    outline:none;
+    border-color:#8FA3F2;
+    background:rgba(255,255,255,.12);
+  }
+
+  .light-field{
+    background:var(--paper);
+    border:1px solid #C4C4BD;
+    color:var(--ink);
+    padding:15px 16px;
+    font-family:'Archivo',sans-serif;font-size:14px;width:100%;
+    transition:border-color .25s ease, background .25s ease;
+  }
+  .light-field::placeholder{color:#8C8C85}
+  .light-field:focus{
+    outline:none;
+    border-color:var(--cobalt);
+    background:var(--white);
+  }
+  .grid2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:6vw;align-items:center}
+  .visual{
+    aspect-ratio:4/3;
+    display:flex;align-items:center;justify-content:center;
+    font-size:12px;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--stone);text-align:center;padding:20px;
+  }
+  .v-ins{background:linear-gradient(160deg,#DDE5F5 0%,#BCC9E8 100%)}
+
+  .proof{padding:11vh 0;border-bottom:1px solid var(--line)}
+  .proof-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:5vw}
+  .stat .num{
+    font-variation-settings:'wdth' 118;font-weight:600;
+    font-size:clamp(2.4rem,4.5vw,3.6rem);line-height:1;letter-spacing:-.02em;
+  }
+  .stat .num sup{font-size:.45em;color:var(--cobalt);font-weight:600}
+  .stat .lab{margin-top:14px;font-size:14px;color:#3c3c38;max-width:24ch}
+
+  .cta{padding:13vh 0}
+  .cta h2{
+    font-variation-settings:'wdth' 118;font-weight:600;
+    font-size:clamp(1.9rem,4.2vw,3.4rem);line-height:1.06;
+    letter-spacing:-.014em;max-width:18ch;margin-bottom:20px;
+  }
+  .cta p{max-width:50ch;color:#3c3c38;font-size:15px;margin-bottom:36px}
+  .btn{
+    display:inline-block;background:var(--ink);color:var(--paper);
+    text-decoration:none;font-size:13px;font-weight:600;
+    letter-spacing:.08em;text-transform:uppercase;
+    padding:18px 34px;transition:background .3s ease;
+  }
+  .btn:hover{background:var(--cobalt)}
+  .btn:focus-visible{outline:2px solid var(--cobalt);outline-offset:3px}
+
+  footer{border-top:1px solid var(--line);padding:40px 0}
+  .foot{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:16px}
+  .foot p{font-size:12px;color:var(--stone);letter-spacing:.04em}
+  .foot a{color:var(--stone);text-decoration:none}
+  .foot a:hover{color:var(--cobalt)}
+
+  @media (max-width:780px){
+    .menu-toggle{display:block}
+    nav.links{
+      display:none;
+      position:absolute;top:64px;left:0;right:0;
+      flex-direction:column;gap:0;
+      background:var(--paper);border-bottom:1px solid var(--line);
+      padding:4px 5vw 20px;
+    }
+    nav.links.open{display:flex}
+    nav.links a{padding:16px 0;border-top:1px solid var(--line);font-size:14px}
+    nav.links a:first-of-type{border-top:none}
+    .lines{grid-template-columns:1fr 1fr}
+  
+  .dark-field{
+    background:rgba(255,255,255,.07);
+    border:1px solid rgba(255,255,255,.45);
+    color:var(--paper);
+    padding:16px 18px;
+    font-family:'Archivo',sans-serif;
+    font-size:15px;width:100%;
+    transition:border-color .25s ease, background .25s ease;
+  }
+  .dark-field::placeholder{color:rgba(255,255,255,.65)}
+  .dark-field:focus{
+    outline:none;
+    border-color:#8FA3F2;
+    background:rgba(255,255,255,.12);
+  }
+  .grid2{grid-template-columns:1fr;gap:36px}
+    .proof-grid{grid-template-columns:1fr;gap:48px}
+  }
+  @media (max-width:520px){
+    .lines{grid-template-columns:1fr}
+  }
+  @media (min-width:781px) and (max-width:920px){
+    nav.links{gap:14px}
+    nav.links a{font-size:12px;letter-spacing:.02em}
+    .wordmark{font-size:13px;letter-spacing:.04em}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{transition:none!important;animation:none!important}
+    html{scroll-behavior:auto}
+  }
+
+  /* ---------- consulting page ---------- */
+  .hero-top{display:flex;justify-content:space-between;align-items:baseline;gap:24px;flex-wrap:wrap}
+  .lang{font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--stone);text-decoration:none;margin-bottom:28px}
+  .lang:hover{color:var(--cobalt)}
+  .lang:focus-visible{outline:2px solid var(--cobalt);outline-offset:3px}
+  h1{max-width:19ch}
+  h1,.block h2,.pipeline h2,.cta h2{text-wrap:balance}
+  .lines.two{grid-template-columns:repeat(2,1fr)}
+  .line-card{padding:32px 28px}
+  .line-card .k{display:block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--cobalt);margin-bottom:14px}
+  .line-card h3{font-size:1.2rem;margin-bottom:10px}
+  .line-card p{font-size:14px;color:#55554f}
+  .method{list-style:none;margin-top:44px;max-width:860px;border-top:1px solid rgba(255,255,255,.2)}
+  .method li{display:grid;grid-template-columns:56px minmax(0,.8fr) minmax(0,1.4fr);gap:20px;align-items:baseline;padding:22px 0;border-bottom:1px solid rgba(255,255,255,.2)}
+  .method .n{font-size:12px;letter-spacing:.14em;font-weight:600;color:#8FA3F2}
+  .method h3{font-variation-settings:'wdth' 118;font-weight:600;font-size:1.15rem;letter-spacing:-.005em}
+  .method p{margin:0;max-width:none;font-size:14px}
+  .scope-label{font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--stone);margin-bottom:16px}
+  .scope,.cv{list-style:none;border-top:1px solid var(--line)}
+  .scope li{padding:16px 0;border-bottom:1px solid var(--line);font-size:15px;color:#3c3c38}
+  .cv li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 24px;padding:16px 0;border-bottom:1px solid var(--line)}
+  .cv b{font-variation-settings:'wdth' 118;font-weight:600;font-size:1.05rem}
+  .cv .yr{font-size:12px;letter-spacing:.1em;color:var(--stone);font-weight:500;text-align:right;padding-top:4px}
+  .cv .role{grid-column:1/-1;font-family:'Source Serif 4',serif;font-style:italic;font-size:15px;color:#3c3c38}
+  .grid2.top{align-items:start}
+  @media (max-width:780px){
+    .lines.two{grid-template-columns:1fr}
+    .method li{grid-template-columns:40px 1fr;gap:6px 12px}
+    .method p{grid-column:2}
+  }
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "ProfessionalService", "@id": "https://conceptagency.no/raadgivning#service", "name": "Concept Agency Consulting", "url": "https://conceptagency.no/raadgivning", "inLanguage": "nb", "description": "Innleid COO (fractional COO) og KI-rådgivning for eierledede små og mellomstore bedrifter. Leveranser: KI-sprint, innleid COO på løpende avtale, vekststrategi, synlighet i KI-søk.", "telephone": "+47 934 64 432", "email": "info@conceptagency.no", "address": {"@type": "PostalAddress", "streetAddress": "Sarbuvollveien 38", "postalCode": "1363", "addressLocality": "Høvik", "addressCountry": "NO"}, "areaServed": {"@type": "Country", "name": "Norway"}, "parentOrganization": {"@type": "Organization", "name": "Concept Agency AS", "url": "https://conceptagency.no/"}, "founder": {"@id": "https://conceptagency.no/#erik-spade"}, "knowsAbout": ["Fractional COO", "Innleid COO", "Innleid driftsleder", "KI-rådgivning", "KI-implementering", "Systemintegrasjon", "Vekststrategi"]}, {"@type": "Person", "@id": "https://conceptagency.no/#erik-spade", "name": "Erik Spade", "jobTitle": "Managing Partner", "worksFor": {"@type": "Organization", "name": "Concept Agency AS", "url": "https://conceptagency.no/"}}]}</script>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="wordmark" href="/" style="display:inline-flex;align-items:center;gap:12px"><img src="/images/ca-mark.png" alt="Concept Agency" style="height:30px;width:auto;display:block">Concept<span>&nbsp;Agency</span></a>
+    <button class="menu-toggle" aria-label="Menu" aria-expanded="false" onclick="var n=document.querySelector('nav.links');this.setAttribute('aria-expanded',n.classList.toggle('open'))"><span></span><span></span></button>
+    <nav class="links">
+      <a href='/retail'>For Retail</a>
+      <a href='/opticians'>For Opticians</a>
+      <a class='active' href='/raadgivning'>Rådgivning</a>
+      <a href="/#brands">Brands</a>
+      <a href="#contact">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-top">
+      <div class="eyebrow">Concept Agency Consulting</div>
+      <a class="lang" href="/consulting" lang="en" hreflang="en">English</a>
+    </div>
+    <h1>En innleid COO som gjør KI til <em>en del av driften.</em></h1>
+    <p>Concept Agency Consulting jobber med eierledede bedrifter som har vokst raskere enn systemene sine. Erik Spade går inn som innleid driftsleder (fractional COO), kobler sammen verktøyene dere allerede bruker, og legger KI på toppen, slik at driften blir smartere etter hvert som bedriften vokser.</p>
+  </div>
+</section>
+
+<section class="block" id="situation">
+  <div class="wrap">
+    <div class="section-label">01 — Situasjonen</div>
+    <h2>Veksten løper fra systemene.</h2>
+    <span class="origin">Det vi ser i de fleste bedrifter med 5 til 50 ansatte</span>
+    <p>Ordreplattformen, regnskapet og CRM-systemet sitter på hver sin del av sannheten, og regneark fyller hullene. Eieren er selve integrasjonen. Alle har prøvd KI, men få har gjort det til en del av arbeidshverdagen.</p>
+    <p>En COO på heltid er for tidlig og for dyrt. En systemleverandør installerer det den blir bedt om. Det som mangler, er en erfaren person som avgjør hva som skal kobles sammen, i hvilken rekkefølge, og hvor KI faktisk gjør nytte.</p>
+  </div>
+</section>
+
+<section class="pipeline" id="approach">
+  <div class="wrap">
+    <div class="eyebrow">02 — Tilnærmingen</div>
+    <h2>Vi avgjør hva som skal bygges, <em>og i hvilken rekkefølge.</em></h2>
+    <p>Verdien ligger ikke i å kjøre selve implementeringen. Den ligger i å vite hvilke integrasjoner som skal bygges, i hvilken rekkefølge, og hvordan KI legges på toppen slik at driften blir smartere etter hvert som den skalerer.</p>
+    <ol class="method">
+      <li><span class="n">01</span><h3>Koble systemene</h3><p>Én dataflyt mellom ordreplattform, regnskap og CRM. Det samme tallet tastes én gang.</p></li>
+      <li><span class="n">02</span><h3>Legg KI på toppen</h3><p>På deres egne data, i oppgavene der det fjerner flest manuelle timer.</p></li>
+      <li><span class="n">03</span><h3>Gjør det synlig</h3><p>Likviditet, margin og runway i ett bilde som eieren leser på ett minutt.</p></li>
+      <li><span class="n">04</span><h3>Gjør det til rutine</h3><p>Workshops, skrevne retningslinjer og en intern ansvarlig, slik at det lever videre uten oss.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="block alt" id="models">
+  <div class="wrap">
+    <div class="section-label">03 — Måter å samarbeide på</div>
+    <h2>Start i det små. Fortsett så lenge det lønner seg.</h2>
+    <span class="origin">Omfang og pris avtales før vi starter</span>
+    <div class="lines two">
+      <div class="line-card"><span class="k">2–4 uker</span><h3>KI-sprint</h3><p>En gjennomgang av systemer, data og arbeidshverdag som ender i et prioritert veikart. Det vanlige stedet å begynne.</p></div>
+      <div class="line-card"><span class="k">Løpende avtale</span><h3>Innleid COO og KI i driften</h3><p>Et fast antall dager i måneden. Erik tar ansvar for drift, systemer og KI-implementering sammen med eieren.</p></div>
+      <div class="line-card"><span class="k">Prosjekt</span><h3>Vekststrategi</h3><p>Hvor bedriften står, hva potensialet er verdt, og hvilke grep som bør tas i hvilken rekkefølge.</p></div>
+      <div class="line-card"><span class="k">Fast omfang</span><h3>Synlighet i KI-søk</h3><p>Hvordan bedriften vises i KI-assistenter og i Googles KI-svar, og hva som bør endres.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="clients">
+  <div class="wrap">
+    <div class="section-label">04 — Hvem vi jobber med</div>
+    <h2>Laget for eierledede bedrifter.</h2>
+    <span class="origin">To typer kunder, én metode</span>
+    <div class="lines two">
+      <div class="line-card"><h3>Eierledede bedrifter</h3><p>5 til 50 ansatte, uansett bransje, som vil ha KI inn i den daglige driften og en drift som ikke lenger hviler på én person.</p></div>
+      <div class="line-card"><h3>Kunnskapsbedrifter</h3><p>Arkitekter, byråer og rådgivere, der tiden er selve produktet og hver manuelle time er margin.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="block alt" id="case">
+  <div class="wrap grid2 top">
+    <div>
+      <div class="section-label">05 — I praksis</div>
+      <h2>En nordisk distributør med flere merkevarer</h2>
+      <span class="origin">Innleid COO siden 2025</span>
+      <p>Et grossistselskap med flere internasjonale merkevarer og et lite team, som selger til forhandlere og etter hvert også direkte til forbruker. Erik er COO på deltid sammen med eierne.</p>
+    </div>
+    <div>
+      <div class="scope-label">Arbeidet omfatter</div>
+      <ul class="scope">
+        <li>Integrasjon mellom B2B-ordreplattformen og regnskapssystemet</li>
+        <li>Et dashbord for likviditet og runway, bygget på begge</li>
+        <li>KI-implementering, ledet sammen med et internt prosjektteam</li>
+        <li>Workshop for teamet og en tydelig policy for deling av dokumenter internt og med kunder</li>
+        <li>Et veikart i fire steg: integrere systemene, legge KI på toppen, gå inn i et nytt marked, skalere innholdsproduksjonen</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="erik">
+  <div class="wrap grid2 top">
+    <div>
+      <div class="section-label">06 — Hvem dere jobber med</div>
+      <h2>Praktiker, ikke teoretiker.</h2>
+      <span class="origin">Erik Spade, Managing Partner</span>
+      <p>Erik har vært med på å starte tre selskaper og har bygget virksomheter i Norden i tre tiår. Han vet hva en bedrift i vekst har råd til å gjøre feil.</p>
+      <p>Concept Agency er laboratoriet. Byrået driver sitt eget CRM, regnskap, leadhåndtering og nettsted på en KI-drevet plattform. Vi bruker det på oss selv først.</p>
+    </div>
+    <ul class="cv">
+      <li><b>Concept Agency</b><span class="yr">I dag</span><span class="role">Managing Partner</span></li>
+      <li><b>Highered</b><span class="yr">2015 — 2024</span><span class="role">Medgründer, salgsdirektør</span></li>
+      <li><b>Webcruiter</b><span class="yr">2003 — 2015</span><span class="role">Medgründer, VP Sales &amp; Marketing. Fra 3 til 40 ansatte, 50 MNOK i omsetning, kjøpt opp i 2018.</span></li>
+      <li><b>JCDecaux Norge</b><span class="yr">1998 — 2000</span><span class="role">Founding partner</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="cta" id="contact">
+  <div class="wrap">
+    <h2>Fortell oss hva dere ville fikset først.</h2>
+    <p>En første samtale koster ingenting. Kan vi hjelpe, får dere et forslag med omfang og pris. Kan vi ikke, sier vi det.</p>
+    <form id="contactForm_consulting" class="contact-form" style="margin-top:8px;max-width:520px;display:grid;gap:14px">
+      <div aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden"><label>Leave this field empty <input type="text" name="ca_confirm" tabindex="-1" autocomplete="off"></label></div>
+      <input type="text" name="name" placeholder="Navn" required class="light-field">
+      <input type="text" name="company" placeholder="Bedrift" class="light-field">
+      <input type="email" name="email" placeholder="E-post" required class="light-field">
+      <textarea name="message" placeholder="Hva ville dere fikset først?" rows="3" class="light-field" style="resize:vertical"></textarea>
+      <button type="submit" class="btn" style="border:none;cursor:pointer;justify-self:start">Start samtalen</button>
+      <p class="form-msg" style="display:none;font-size:14px;margin-top:4px"></p>
+    </form>
+    <script>
+    window.caT0=window.caT0||Date.now();
+    document.getElementById('contactForm_consulting').addEventListener('submit', async function(e){
+      e.preventDefault();
+      var f=e.target, btn=f.querySelector('button'), msg=f.querySelector('.form-msg');
+      var data={}; new FormData(f).forEach(function(v,k){data[k]=v;});
+      var bot=!!data.ca_confirm||(Date.now()-window.caT0)<3000; delete data.ca_confirm;
+      data.form='Consulting';
+      data.source='conceptagency.no — rådgivning (NO)';
+      btn.disabled=true; btn.textContent='Sender…';
+      try{
+        if(!bot) await fetch('https://hooks.zapier.com/hooks/catch/20267965/431r5kg/',{method:'POST',body:JSON.stringify(data)});
+        f.querySelectorAll('input,textarea').forEach(function(i){i.style.display='none';});
+        btn.style.display='none';
+        msg.style.display='block'; msg.style.color='#2E7D43';
+        msg.textContent="Takk — vi tar kontakt innen én virkedag.";
+      }catch(err){
+        btn.disabled=false; btn.textContent='Start samtalen';
+        msg.style.display='block'; msg.style.color='#B3463C';
+        msg.textContent='Noe gikk galt — ring oss heller: +47 934 64 432.';
+      }
+    });
+    </script>
+    <p style="margin-top:22px;font-size:14px;color:#3c3c38">Eller ring Erik Spade direkte: <a href="tel:+4793464432" style="color:var(--ink);font-weight:600;text-decoration:underline;text-underline-offset:3px">+47 934 64 432</a></p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <p>© 2026 Concept Agency AS — Sarbuvollveien 38, 1363 Høvik, Norway</p>
+    <p><a href="tel:+4793464432">+47 934 64 432</a> &nbsp;·&nbsp; <a href="mailto:info@conceptagency.no">info@conceptagency.no</a></p>
+    <p><a href="/">Hjem</a> &nbsp;·&nbsp; <a href="https://www.instagram.com/conceptagency_norway/" target="_blank" rel="noopener">Instagram</a> &nbsp;·&nbsp; <a href="https://www.linkedin.com/company/concept-agency-as/" target="_blank" rel="noopener">LinkedIn</a> &nbsp;·&nbsp; <a href="/privacy">Personvern</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
