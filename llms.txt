@@ -23,7 +23,7 @@ Concept Agency selects a small number of design-led brands and builds them lasti
 
 ## Concept Agency Consulting
 
-Alongside the agency, Concept Agency Consulting works with owner-led small and mid-sized companies (typically 5 to 50 people) and professional services firms. The lead offer is Fractional COO and AI operations: Erik Spade steps in as part-time COO, connects the systems the company already runs, and puts AI on top. Engagement models: AI sprint (2–4 weeks, diagnostic and prioritised roadmap), Fractional COO and AI operations (retainer), growth strategy project, and AI search visibility audit. Concept Agency itself runs on an AI-native stack and uses the method on itself first.
+Alongside the agency, Concept Agency Consulting works with owner-led small and mid-sized companies (typically 5 to 50 people) and professional services firms. The lead offer is Fractional COO and AI operations: Erik Spade steps in as part-time COO, connects the systems the company already runs, and puts AI on top. Engagement models: AI Start (four sessions over two weeks: setup of the AI platform the company already has, ground rules and team training, with a follow-up after 30 days), AI sprint (2–4 weeks, diagnostic and prioritised roadmap), Fractional COO and AI operations (retainer), and AI search visibility audit. Concept Agency itself runs on an AI-native stack and uses the method on itself first.
 
 - English: https://conceptagency.no/consulting
 - Norwegian (KI-rådgivning, innleid COO): https://conceptagency.no/raadgivning
