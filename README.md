@@ -9,6 +9,8 @@ Source for the Concept Agency AS website — a static site, no build step.
 | `index.html` | Homepage |
 | `retail.html` | For Retail — served at `/retail` |
 | `opticians.html` | For Opticians — served at `/opticians` |
+| `forhandler.html` | Norwegian version of For Retail — served at `/forhandler` |
+| `optiker.html` | Norwegian version of For Opticians — served at `/optiker` |
 | `privacy.html` | Privacy — served at `/privacy` |
 | `milena-kling/` | Milena Kling brand page — served at `/milena-kling` |
 | `images/` | Shared site imagery |

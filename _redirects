@@ -1,6 +1,6 @@
 # Old WordPress URLs -> new pages
 /about            /#brands                    301
-/ohlsson-lohaven  /retail.html#hippiedeluxe   301
+/ohlsson-lohaven  /forhandler#hippiedeluxe    301
 
 # Pretty URLs
 /retail     /retail.html     200
@@ -8,9 +8,13 @@
 /privacy    /privacy.html    200
 /consulting  /consulting.html  200
 /raadgivning  /raadgivning.html  200
+/optiker     /optiker.html     200
+/forhandler  /forhandler.html  200
 
 # Aliases people may type
 /consultancy  /consulting  301
 /advisory     /consulting  301
 /radgivning   /raadgivning  301
 /rådgivning   /raadgivning  301
+/optikere     /optiker     301
+/forhandlere  /forhandler  301
