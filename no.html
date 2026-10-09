@@ -306,6 +306,14 @@
   .proof blockquote{color:var(--paper)}
   .proof blockquote em{color:#8FA3F2}
   .hero h1{text-wrap:balance}
+  /* brand strip: dark band, brand names read as links */
+  .logostrip{background:var(--ink);border-bottom:none}
+  .logostrip-label{color:#C9C9C2}
+  .brandmark{color:var(--paper);opacity:.88;display:inline-block;position:relative;padding-bottom:7px;transition:opacity .3s ease,color .3s ease,transform .3s ease}
+  .brandmark::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:currentColor;opacity:.4;transition:opacity .3s ease}
+  .brandmark:hover{opacity:1;color:#8FA3F2;transform:translateY(-3px)}
+  .brandmark:hover::after{opacity:1}
+  .brandmark:focus-visible{outline-color:#8FA3F2}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://conceptagency.no/no#webpage", "url": "https://conceptagency.no/no", "name": "Concept Agency — Kuraterte designmerkevarer for Norden", "description": "Concept Agency er et kuratert B2B-agentur i Norge som bringer et lite utvalg designdrevne internasjonale merkevarer til konseptbutikker, museumsbutikker og optikere i Norden.", "isPartOf": {"@id": "https://conceptagency.no/#website"}, "about": {"@id": "https://conceptagency.no/#organization"}, "inLanguage": "nb"}, {"@type": "Organization", "@id": "https://conceptagency.no/#organization", "name": "Concept Agency", "legalName": "Concept Agency AS", "url": "https://conceptagency.no/"}, {"@type": "WebSite", "@id": "https://conceptagency.no/#website", "url": "https://conceptagency.no/", "name": "Concept Agency", "publisher": {"@id": "https://conceptagency.no/#organization"}, "inLanguage": ["en", "nb"]}]}</script>
 </head>
@@ -422,7 +430,7 @@
         <h2 style="font-variation-settings:'wdth' 118;font-weight:600;font-size:clamp(1.9rem,3.8vw,3rem);line-height:1.06;letter-spacing:-.012em;margin-bottom:24px;max-width:14ch">Nychair&nbsp;X<br><span style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:400;font-size:.55em;color:var(--cobalt)">Et japansk designikon, siden 1970</span></h2>
         <p style="max-width:50ch;color:#3c3c38;font-size:15px;margin-bottom:14px">Nychair X ble designet av Takeshi Nii i 1970 og produseres fortsatt i sin helhet i Japan. Det er den sammenleggbare hvilestolen som har fått en varig plass i designhistorien — komfortabel, mulig å reparere, og vakker både sammenlagt og åpen.</p>
         <p style="max-width:50ch;color:#3c3c38;font-size:15px">Vi tar Nychair X til det nordiske markedet — for designbutikker, museumsbutikker og interiørbutikker som vet at noen gjenstander kjøper man én gang og beholder hele livet.</p>
-        <a href="mailto:info@conceptagency.no?subject=Nychair%20X%20Nordics" style="display:inline-flex;align-items:center;gap:8px;margin-top:30px;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink);text-decoration:none">Meld interesse som forhandler <span>→</span></a>
+        <a href="#contact" onclick="var t=document.querySelector('#contactForm_index textarea');if(t&amp;&amp;!t.value)t.value='Jeg vil gjerne vite mer om Nychair X.'" style="display:inline-flex;align-items:center;gap:8px;margin-top:30px;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink);text-decoration:none">Meld interesse som forhandler <span>→</span></a>
       </div>
       <figure style="aspect-ratio:4/5;overflow:hidden;margin:0"><img src="/images/nychairx.jpg" alt="Nychair X hvilestol i et japansk interiør" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></figure>
     </div>
@@ -450,7 +458,7 @@
 
 <section class="brands" id="consulting" style="padding:10vh 0">
   <div class="wrap">
-    <div class="section-label">Concept Agency Consulting — Samme erfaring, brukt på din bedrift</div>
+    <div class="section-label">Concept Agency Consulting</div>
     <a class="brand-row consult-row" href="/raadgivning">
       <h3>Innleid CAIO og KI i driften</h3>
       <span class="cat">For eierledede bedrifter som har vokst fra rutinene sine</span>
