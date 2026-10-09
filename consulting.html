@@ -310,6 +310,9 @@
   @media (max-width:780px){
     .qa{grid-template-columns:1fr}
   }
+  nav.links a.back{color:var(--stone)}
+  nav.links a.back:hover{color:var(--cobalt)}
+  section[id]{scroll-margin-top:64px}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "ProfessionalService", "@id": "https://conceptagency.no/consulting#service", "name": "Concept Agency Consulting", "url": "https://conceptagency.no/consulting", "inLanguage": "en", "description": "Fractional Chief AI Officer (CAIO) and AI operations for owner-led small and mid-sized companies. Engagements: AI Start (setup and team training), AI sprint, fractional CAIO retainer, AI search visibility audit.", "telephone": "+47 934 64 432", "email": "info@conceptagency.no", "address": {"@type": "PostalAddress", "streetAddress": "Sarbuvollveien 38", "postalCode": "1363", "addressLocality": "Høvik", "addressCountry": "NO"}, "areaServed": {"@type": "Country", "name": "Norway"}, "parentOrganization": {"@type": "Organization", "@id": "https://conceptagency.no/#organization", "name": "Concept Agency", "legalName": "Concept Agency AS", "url": "https://conceptagency.no/"}, "founder": {"@id": "https://conceptagency.no/#erik-spade"}, "knowsAbout": ["Fractional CAIO", "Chief AI Officer", "AI implementation", "AI operations", "Systems integration", "Generative engine optimisation"]}, {"@type": "Person", "@id": "https://conceptagency.no/#erik-spade", "name": "Erik Spade", "sameAs": ["https://www.linkedin.com/in/erikspade67"], "jobTitle": "Managing Partner", "worksFor": {"@type": "Organization", "@id": "https://conceptagency.no/#organization", "name": "Concept Agency", "legalName": "Concept Agency AS", "url": "https://conceptagency.no/"}}, {"@type": "FAQPage", "@id": "https://conceptagency.no/consulting#faq", "url": "https://conceptagency.no/consulting", "inLanguage": "en", "mainEntity": [{"@type": "Question", "name": "What is a fractional Chief AI Officer (CAIO), and why not just hire one full-time?", "acceptedAnswer": {"@type": "Answer", "text": "An experienced leader who takes responsibility for AI in your company, part-time – typically one to two days a week. You get senior capacity to decide where AI belongs, connect it to your systems and get the team using it, without the cost and risk of a full-time hire. For most owner-led companies the need is real, but not big enough for a full position."}}, {"@type": "Question", "name": "We run on spreadsheets and email. Are we ready for AI?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Most of the companies we talk to are exactly there. You need neither new systems nor tidy data to begin. You need one process that costs you time every week. We start there, prove it works, and build from it. AI maturity is a result of the work, not a requirement for it."}}, {"@type": "Question", "name": "Where do we start, and how soon do we see results?", "acceptedAnswer": {"@type": "Answer", "text": "It depends on where you are. If you have not started, we begin with AI Start: four sessions over two weeks, after which the platform is set up and the team is trained on its own tasks. If you use AI but cannot see the result, we begin with an AI sprint: in two to four weeks you get a prioritised roadmap showing what to build first."}}, {"@type": "Question", "name": "How does an engagement work, and what does it cost?", "acceptedAnswer": {"@type": "Answer", "text": "You can start with AI Start at a fixed price, or an AI sprint over two to four weeks. If you need someone to lead the AI work over time, the fractional CAIO is a retainer with a fixed number of days each month. The AI search visibility audit is a separate engagement with a fixed scope. Scope and price are agreed before we start, and the first conversation is free and without obligation."}}, {"@type": "Question", "name": "Is our data safe when we use AI?", "acceptedAnswer": {"@type": "Answer", "text": "It is one of the first things we settle. We use business versions of the AI tools, where your data is not used to train models. We agree which data can be used for what, sign a confidentiality agreement and comply with GDPR. Sensitive data stays out until the framework is in place."}}]}]}</script>
 </head>
@@ -317,14 +320,13 @@
 
 <header>
   <div class="wrap nav">
-    <a class="wordmark" href="/" style="display:inline-flex;align-items:center;gap:12px"><img src="/images/ca-mark.png" alt="Concept Agency" style="height:30px;width:auto;display:block">Concept<span>&nbsp;Agency</span></a>
+    <a class="wordmark" href="/consulting" style="display:inline-flex;align-items:center;gap:12px"><img src="/images/ca-mark.png" alt="Concept Agency" style="height:30px;width:auto;display:block">Concept<span>&nbsp;Agency</span></a>
     <button class="menu-toggle" aria-label="Menu" aria-expanded="false" onclick="var n=document.querySelector('nav.links');this.setAttribute('aria-expanded',n.classList.toggle('open'))"><span></span><span></span></button>
-    <nav class="links">
-      <a href='/retail'>For Retail</a>
-      <a href='/opticians'>For Opticians</a>
-      <a class='active' href='/consulting'>Consulting</a>
-      <a href="/#brands">Brands</a>
+    <nav class="links" onclick="if(event.target.tagName==='A'){this.classList.remove('open');this.previousElementSibling.setAttribute('aria-expanded','false')}">
+      <a href="#models">Offers</a>
+      <a href="#case">Client case</a>
       <a href="#contact">Contact</a>
+      <a class="back" href="/">The agency</a>
     </nav>
   </div>
 </header>
