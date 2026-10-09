@@ -9,6 +9,7 @@
 /consulting  /consulting.html  200
 /raadgivning  /raadgivning.html  200
 /optiker     /optiker.html     200
+/no          /no.html          200
 /forhandler  /forhandler.html  200
 
 # Aliases people may type
@@ -17,4 +18,6 @@
 /radgivning   /raadgivning  301
 /rådgivning   /raadgivning  301
 /optikere     /optiker     301
+/nb           /no          301
+/norsk        /no          301
 /forhandlere  /forhandler  301

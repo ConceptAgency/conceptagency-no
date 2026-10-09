@@ -7,6 +7,7 @@ Source for the Concept Agency AS website — a static site, no build step.
 | Path | Purpose |
 |---|---|
 | `index.html` | Homepage |
+| `no.html` | Norwegian homepage — served at `/no` |
 | `retail.html` | For Retail — served at `/retail` |
 | `opticians.html` | For Opticians — served at `/opticians` |
 | `forhandler.html` | Norwegian version of For Retail — served at `/forhandler` |
