@@ -11,6 +11,7 @@
 /optiker     /optiker.html     200
 /no          /no.html          200
 /forhandler  /forhandler.html  200
+/hippie-de-luxe  /hippie-de-luxe.html  200
 
 # Aliases people may type
 /consultancy  /consulting  301
@@ -21,3 +22,5 @@
 /nb           /no          301
 /norsk        /no          301
 /forhandlere  /forhandler  301
+/hippiedeluxe  /hippie-de-luxe  301
+/hdl          /hippie-de-luxe  301
