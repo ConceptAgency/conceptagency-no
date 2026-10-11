@@ -16,6 +16,7 @@ Source for the Concept Agency AS website — a static site, no build step.
 | `hippie-de-luxe.html` | Hippie de Luxe brand list (Norwegian) — served at `/hippie-de-luxe` |
 | `milena-kling/` | Milena Kling brand page — served at `/milena-kling` |
 | `images/` | Shared site imagery |
+| `images/hdl/` | Hippie de Luxe brand logos — 480×240 WebP, one per brand, named by the brand's B2B slug |
 | `_redirects` | Netlify redirects and pretty URLs |
 | `llms.txt` | Machine-readable site summary |
 
