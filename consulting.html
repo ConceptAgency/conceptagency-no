@@ -479,6 +479,7 @@
       data.form='Consulting';
       data.source='conceptagency.no — consulting page (EN)';
       if(data.phone){var p=String(data.phone).replace(/[^\d+]/g,'');if(/^00/.test(p))p='+'+p.slice(2);else if(/^\d{8}$/.test(p))p='+47'+p;data.sms_link='https://conceptagency.no/sms#to='+encodeURIComponent(p)+'&n='+encodeURIComponent(String(data.name||'').trim().split(/\s+/)[0])+'&l=en';}
+      var L=[];if(String(data.city||'').trim())L.push('*City:* '+data.city);if(String(data.phone||'').trim())L.push('*Phone:* '+data.phone);if(data.sms_link)L.push('*SMS:* <'+data.sms_link+'|Send SMS →>');data.extra_lines=L.map(function(x){return '\n'+x;}).join('');
       btn.disabled=true; btn.textContent='Sending…';
       try{
         if(!bot) await fetch('https://hooks.zapier.com/hooks/catch/20267965/431r5kg/',{method:'POST',body:JSON.stringify(data)});
