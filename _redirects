@@ -12,6 +12,7 @@
 /no          /no.html          200
 /forhandler  /forhandler.html  200
 /hippie-de-luxe  /hippie-de-luxe.html  200
+/sms         /sms.html         200
 
 # Aliases people may type
 /consultancy  /consulting  301

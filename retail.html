@@ -357,6 +357,7 @@
       <input type="text" name="name" placeholder="Your name" required style="background:transparent;border:1px solid var(--line);color:var(--ink);padding:15px 16px;font-family:'Archivo',sans-serif;font-size:14px;width:100%">
       <input type="text" name="company" placeholder="Store / company" style="background:transparent;border:1px solid var(--line);color:var(--ink);padding:15px 16px;font-family:'Archivo',sans-serif;font-size:14px;width:100%">
       <input type="email" name="email" placeholder="Email" required style="background:transparent;border:1px solid var(--line);color:var(--ink);padding:15px 16px;font-family:'Archivo',sans-serif;font-size:14px;width:100%">
+      <input type="tel" name="phone" autocomplete="tel" placeholder="Mobile (optional) — so we can text you" style="background:transparent;border:1px solid var(--line);color:var(--ink);padding:15px 16px;font-family:'Archivo',sans-serif;font-size:14px;width:100%">
       <textarea name="message" placeholder="What are you interested in?" rows="3" style="background:transparent;border:1px solid var(--line);color:var(--ink);padding:15px 16px;font-family:'Archivo',sans-serif;font-size:14px;width:100%;resize:vertical"></textarea>
       <button type="submit" class="btn" style="border:none;cursor:pointer;justify-self:start">Start the conversation</button>
       <p class="form-msg" style="display:none;font-size:14px;margin-top:4px"></p>
@@ -370,6 +371,7 @@
       var bot=!!data.ca_confirm||(Date.now()-window.caT0)<3000; delete data.ca_confirm;
       data.form='General contact';
       data.source='conceptagency.no — retail page';
+      if(data.phone){var p=String(data.phone).replace(/[^\d+]/g,'');if(/^00/.test(p))p='+'+p.slice(2);else if(/^\d{8}$/.test(p))p='+47'+p;data.sms_link='https://conceptagency.no/sms#to='+encodeURIComponent(p)+'&n='+encodeURIComponent(String(data.name||'').trim().split(/\s+/)[0])+'&l=en';}
       btn.disabled=true; btn.textContent='Sending…';
       try{
         if(!bot) await fetch('https://hooks.zapier.com/hooks/catch/20267965/431r5kg/',{method:'POST',body:JSON.stringify(data)});

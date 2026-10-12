@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<title>Send SMS · Concept Agency</title>
+<link rel="icon" href="/favicon.ico">
+<style>
+  :root{--ink:#131313;--paper:#F6F4EF;--cobalt:#1B3FCC;--muted:#6b6b66}
+  *{box-sizing:border-box}
+  body{margin:0;min-height:100vh;display:grid;place-items:center;background:var(--paper);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif;padding:24px 16px}
+  main{max-width:420px;width:100%}
+  .k{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 10px}
+  h1{font-size:24px;font-weight:600;margin:0 0 18px}
+  pre{white-space:pre-wrap;font:inherit;font-size:15px;line-height:1.5;background:#fff;border:1px solid #e3e0d8;padding:14px 16px;margin:0 0 20px}
+  a.btn{display:block;text-align:center;background:var(--cobalt);color:#fff;text-decoration:none;padding:15px;font-weight:600;margin-bottom:10px}
+  a.alt{display:block;text-align:center;color:var(--ink);padding:12px;border:1px solid var(--ink);text-decoration:none}
+  .err{color:#B3463C}
+</style>
+</head>
+<body>
+<main>
+  <p class="k">Concept Agency · lead</p>
+  <h1 id="h">Send SMS</h1>
+  <pre id="body"></pre>
+  <a class="btn" id="sms" href="#">Åpne i Meldinger</a>
+  <a class="alt" id="tel" href="#">Ring i stedet</a>
+</main>
+<script>
+(function(){
+  // Data travels in the URL fragment (#), so it is never sent to the server or logged.
+  var q={};(location.hash.slice(1)||'').split('&').forEach(function(kv){var i=kv.indexOf('=');if(i>0)q[kv.slice(0,i)]=decodeURIComponent(kv.slice(i+1).replace(/\+/g,' '));});
+  var to=(q.to||'').replace(/[^\d+]/g,''), n=(q.n||'').trim(), en=q.l==='en';
+  if(!to){document.getElementById('h').textContent='Mangler telefonnummer';document.getElementById('h').className='err';document.getElementById('sms').style.display='none';document.getElementById('tel').style.display='none';return;}
+  var msg=en
+    ? 'Hi'+(n?' '+n:'')+'! Thanks for reaching out via conceptagency.no. This is Erik Spade at Concept Agency. When would suit you for a quick call?'
+    : 'Hei'+(n?' '+n:'')+'! Takk for henvendelsen via conceptagency.no. Dette er Erik Spade i Concept Agency. Når passer det med en kort prat?';
+  var href='sms:'+to+'?&body='+encodeURIComponent(msg);
+  document.getElementById('h').textContent='SMS til '+(n?n+' · ':'')+to;
+  document.getElementById('body').textContent=msg;
+  document.getElementById('sms').href=href;
+  document.getElementById('tel').href='tel:'+to;
+  if(/iPhone|iPad|Android/i.test(navigator.userAgent)) location.href=href;
+})();
+</script>
+</body>
+</html>
