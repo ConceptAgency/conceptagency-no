@@ -11,18 +11,20 @@
 <meta property="og:title" content="Izipizi Sport — Active Line AW26">
 <meta property="og:description" content="Skibriller, sports- og polariserte solbriller fra Paris. Klar for vintersesongen — bestill nå i Izipizi B2B.">
 <meta property="og:url" content="https://conceptagency.no/izipizi-sport">
-<meta property="og:image" content="https://conceptagency.no/images/izipizi-snow.jpg">
-<meta property="og:image:width" content="1000">
-<meta property="og:image:height" content="1003">
+<meta property="og:image" content="https://conceptagency.no/images/izipizi-sport-kv.jpg">
+<meta property="og:image:width" content="1440">
+<meta property="og:image:height" content="720">
 <meta property="og:locale" content="nb_NO">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" as="image" href="/images/izipizi-snow.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,300..600;1,8..60,300..600&display=swap" rel="stylesheet">
 <style>
+
 
   :root{
     --paper:#F6F6F3;
@@ -201,34 +203,44 @@
   .lang:focus-visible{outline:2px solid var(--cobalt);outline-offset:3px}
 
   
-  /* ---------- Izipizi Sport page ---------- */
-  .sport-hero{padding:9vh 0 10vh;border-bottom:1px solid var(--line)}
-  .sport-hero .grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:6vw;align-items:center}
-  .sport-hero h1{max-width:16ch}
-  .sport-hero p.lead{margin-top:28px;max-width:50ch;font-size:clamp(1rem,1.3vw,1.12rem);color:#3c3c38}
-  .actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:38px;align-items:center}
-  .btn.cobalt{background:var(--cobalt)}
-  .btn.cobalt:hover{background:var(--ink)}
-  .btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--ink);padding:17px 30px}
-  .btn.ghost:hover{background:var(--ink);color:var(--paper)}
-  .hero-img{margin:0;aspect-ratio:1/1;overflow:hidden;position:relative}
-  .hero-img img{width:100%;height:100%;object-fit:cover;display:block}
-  .hero-img figcaption{position:absolute;left:0;bottom:0;background:var(--paper);padding:10px 14px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:600}
 
-  .facts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-bottom:1px solid var(--line)}
-  .fact{padding:34px 5vw 34px 0;border-right:1px solid var(--line)}
-  .fact:last-child{border-right:0}
+  /* ---------- Izipizi Sport page (visual) ---------- */
+  :root{--ice:#E9EEF3;--night:#0E1726;--lilac:#B9A7E0;--snowblue:#9db0ff}
+  .btn.cobalt{background:var(--cobalt);color:#fff}
+  .btn.cobalt:hover{background:var(--ink)}
+  .btn.light{background:#fff;color:var(--ink)}
+  .btn.light:hover{background:var(--cobalt);color:#fff}
+  .btn.ghost-light{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.6);padding:17px 30px}
+  .btn.ghost-light:hover{background:#fff;color:var(--ink)}
+
+  /* hero: full-bleed split, dark */
+  .vhero{background:var(--night);color:#fff;position:relative;overflow:hidden}
+  .vhero .grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);min-height:min(88vh,860px)}
+  .vhero .copy{padding:12vh 5vw 10vh max(5vw,calc((100vw - 1280px)/2 + 5vw));display:flex;flex-direction:column;justify-content:center;position:relative;z-index:2}
+  .vhero .eyebrow{color:var(--snowblue)}
+  .vhero .eyebrow::before{background:var(--snowblue)}
+  .vhero h1{font-size:clamp(2.6rem,6.2vw,5.6rem);line-height:.98;max-width:12ch;letter-spacing:-.02em}
+  .vhero h1 em{color:var(--snowblue)}
+  .vhero .lead{margin-top:28px;max-width:44ch;font-size:clamp(1rem,1.25vw,1.12rem);color:#c9d0db}
+  .vhero .actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:40px}
+  .vhero .photo{position:relative;margin:0;min-height:420px}
+  .vhero .photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:35% 30%}
+  .vhero .photo::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--night) 0%,rgba(14,23,38,0) 22%);z-index:1}
+  .tagline{position:absolute;right:20px;bottom:20px;z-index:2;background:#fff;color:var(--ink);font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;padding:10px 14px}
+  .scroll-cue{margin-top:56px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#7f8aa0}
+
+  /* facts */
+  .facts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+  .fact{padding:34px 2.4vw 34px 0}
+  .fact + .fact{padding-left:2.4vw;border-left:1px solid var(--line)}
   .fact .big{font-variation-settings:'wdth' 118;font-weight:600;font-size:clamp(1.6rem,2.8vw,2.3rem);line-height:1}
   .fact .small{margin-top:8px;font-size:13px;color:var(--stone);max-width:24ch}
   .facts-wrap{border-bottom:1px solid var(--line);background:var(--white)}
-  .facts-wrap .facts{border-bottom:0}
-  .fact{padding-left:0}
-  .fact + .fact{padding-left:2.4vw}
 
-  .section{padding:11vh 0;border-bottom:1px solid var(--line);scroll-margin-top:86px}
+  .section{padding:11vh 0;scroll-margin-top:86px}
   .section.alt{background:var(--white)}
   .label{font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--stone);margin-bottom:18px}
-  .section h2{font-variation-settings:'wdth' 118;font-weight:600;font-size:clamp(1.8rem,3.4vw,2.8rem);line-height:1.05;letter-spacing:-.012em;max-width:22ch;text-wrap:balance}
+  .section h2{font-variation-settings:'wdth' 118;font-weight:600;font-size:clamp(1.9rem,3.6vw,3rem);line-height:1.04;letter-spacing:-.014em;max-width:22ch;text-wrap:balance}
   .section h2 em{font-family:'Source Serif 4',serif;font-style:italic;font-weight:400;color:var(--cobalt)}
   .section .intro{margin-top:18px;max-width:60ch;color:#3c3c38;font-size:15px}
 
@@ -237,22 +249,45 @@
   .why p{font-size:15px;color:#3c3c38;max-width:40ch}
   .why .n{font-family:'Source Serif 4',serif;font-style:italic;color:var(--cobalt);font-size:1.4rem}
 
-  .models{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:0;margin-top:48px;border-top:1px solid var(--line);border-left:1px solid var(--line)}
-  .model{padding:28px 26px 26px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;flex-direction:column;background:var(--paper)}
-  .section.alt .model{background:var(--white)}
-  .model .tag{font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--cobalt)}
-  .model h3{font-variation-settings:'wdth' 125;font-weight:700;font-size:1.6rem;letter-spacing:.02em;margin:10px 0 6px;text-transform:uppercase}
-  .model .use{font-family:'Source Serif 4',serif;font-style:italic;color:#3c3c38;font-size:15px;margin-bottom:16px}
-  .model ul{list-style:none;font-size:14px;color:#3c3c38;display:grid;gap:6px;margin-bottom:18px}
-  .model li::before{content:"— ";color:var(--stone)}
-  .model .meta{margin-top:auto;padding-top:14px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:12px;font-size:13px}
-  .model .meta span{color:var(--stone)}
-  .model .meta strong{font-weight:600}
-  .model.feature{background:var(--ink)!important;color:var(--paper)}
-  .model.feature .use,.model.feature ul{color:#d6d6d0}
-  .model.feature .tag{color:#9db0ff}
-  .model.feature .meta{border-top-color:#3a3a36}
-  .model.feature .meta span{color:#a3a39c}
+  /* editorial model rows */
+  .lineup{border-top:1px solid var(--line)}
+  .row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);min-height:min(92vh,880px);border-bottom:1px solid var(--line);background:var(--white)}
+  .row:nth-child(even){background:var(--paper)}
+  .row:nth-child(even) .pic{order:2}
+  .row .pic{position:relative;margin:0;overflow:hidden;background:var(--ice)}
+  .row .pic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.4s cubic-bezier(.2,.6,.2,1)}
+  .row:hover .pic img{transform:scale(1.03)}
+  .row .pic figcaption{position:absolute;left:20px;bottom:20px;background:var(--paper);font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;padding:10px 14px}
+  .row .txt{padding:9vh 6vw;display:flex;flex-direction:column;justify-content:center}
+  .row .idx{font-family:'Source Serif 4',serif;font-style:italic;color:var(--cobalt);font-size:1.3rem}
+  .row .tag{font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:var(--stone);margin-top:6px}
+  .row h3{font-variation-settings:'wdth' 125;font-weight:800;font-size:clamp(3rem,7vw,6.4rem);line-height:.9;letter-spacing:-.01em;text-transform:uppercase;margin:18px 0 10px}
+  .row .use{font-family:'Source Serif 4',serif;font-style:italic;font-size:clamp(1.1rem,1.6vw,1.35rem);color:var(--cobalt);margin-bottom:22px}
+  .row ul{list-style:none;display:grid;gap:10px;font-size:15px;color:#3c3c38;max-width:44ch}
+  .row li{padding-left:22px;position:relative}
+  .row li::before{content:"";position:absolute;left:0;top:.62em;width:12px;height:2px;background:var(--cobalt)}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+  .chip{font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:600;border:1px solid var(--line);padding:8px 12px;background:var(--paper)}
+  .row:nth-child(even) .chip{background:var(--white)}
+  .chip.new{border-color:var(--cobalt);color:var(--cobalt)}
+
+  /* key visual band */
+  .kv{position:relative;background:#eae6e1;overflow:hidden}
+  .kv img{display:block;width:100%;height:auto;aspect-ratio:2/1;object-fit:cover}
+  .kv .over{position:absolute;right:max(5vw,calc((100vw - 1280px)/2 + 5vw));bottom:12%;max-width:30ch;color:var(--ink)}
+  .kv .over h2{font-variation-settings:'wdth' 118;font-weight:600;font-size:clamp(1.6rem,3vw,2.6rem);line-height:1.05;letter-spacing:-.012em}
+  .kv .over h2 em{font-family:'Source Serif 4',serif;font-style:italic;font-weight:400;color:var(--cobalt)}
+  .kv .over p{margin-top:12px;font-size:15px;color:#3c3c38}
+  .kv .over .btn{margin-top:22px}
+
+  /* also in collection */
+  .also{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;margin-top:44px;border-top:1px solid var(--line);border-left:1px solid var(--line)}
+  .mini{padding:28px 26px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--paper)}
+  .mini .tag{font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--cobalt)}
+  .mini h3{font-variation-settings:'wdth' 125;font-weight:800;font-size:1.9rem;text-transform:uppercase;margin:10px 0 4px}
+  .mini .use{font-family:'Source Serif 4',serif;font-style:italic;color:#3c3c38;margin-bottom:14px}
+  .mini ul{list-style:none;font-size:14px;color:#3c3c38;display:grid;gap:6px}
+  .mini li::before{content:"— ";color:var(--stone)}
 
   .lens{width:100%;border-collapse:collapse;margin-top:40px;font-size:14px}
   .lens th,.lens td{text-align:left;padding:14px 16px 14px 0;border-bottom:1px solid var(--line);vertical-align:top}
@@ -262,7 +297,7 @@
   .table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
 
   .starter{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:6vw;margin-top:44px;align-items:start}
-  .pack{border:1px solid var(--ink);padding:30px}
+  .pack{border:1px solid var(--ink);padding:30px;background:var(--paper)}
   .pack h3{font-variation-settings:'wdth' 118;font-weight:600;font-size:1.3rem;margin-bottom:6px}
   .pack .sub{font-size:13px;color:var(--stone);margin-bottom:20px}
   .pack table{width:100%;border-collapse:collapse;font-size:14px}
@@ -271,38 +306,50 @@
   .pack tr:last-child td{border-bottom:0;padding-top:14px;font-size:15px}
   .where{display:grid;gap:14px}
   .where p{font-size:15px;color:#3c3c38;max-width:48ch}
-  .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
-  .chip{font-size:12px;letter-spacing:.06em;text-transform:uppercase;font-weight:600;border:1px solid var(--line);padding:8px 12px;background:var(--white)}
+  .where .chips{margin-top:6px}
 
-  .order{padding:12vh 0;background:var(--ink);color:var(--paper)}
-  .order .grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:6vw}
-  .order h2{font-variation-settings:'wdth' 118;font-weight:600;font-size:clamp(1.9rem,4vw,3.2rem);line-height:1.06;letter-spacing:-.014em;max-width:16ch}
-  .order h2 em{font-family:'Source Serif 4',serif;font-style:italic;font-weight:400;color:#9db0ff}
-  .order p{color:#cfcfc9;font-size:15px;max-width:46ch;margin-top:18px}
-  .order .box{border:1px solid #3a3a36;padding:30px}
-  .order .box h3{font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:#a3a39c;margin-bottom:12px}
+  .order{padding:12vh 0;background:var(--night);color:#fff;position:relative;overflow:hidden}
+  .order::before{content:"";position:absolute;inset:0;background:url('/images/izipizi-sport-kv.jpg') 30% center/cover no-repeat;opacity:.14;filter:grayscale(1)}
+  .order .grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:6vw;position:relative}
+  .order h2{font-variation-settings:'wdth' 118;font-weight:600;font-size:clamp(2rem,4.4vw,3.6rem);line-height:1.02;letter-spacing:-.016em;max-width:14ch}
+  .order h2 em{font-family:'Source Serif 4',serif;font-style:italic;font-weight:400;color:var(--snowblue)}
+  .order p{color:#c9d0db;font-size:15px;max-width:46ch;margin-top:18px}
+  .order .box{border:1px solid rgba(255,255,255,.18);padding:30px;background:rgba(14,23,38,.72);backdrop-filter:blur(4px)}
+  .order .box h3{font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:#9aa4b6;margin-bottom:12px}
   .order .box + .box{margin-top:18px}
-  .order .btn{background:var(--paper);color:var(--ink);margin-top:20px}
-  .order .btn:hover{background:var(--cobalt);color:var(--paper)}
-  .order a.plain{color:var(--paper);text-decoration:underline;text-underline-offset:3px}
-  .order input,.order textarea{background:transparent;border:1px solid #4a4a45;color:var(--paper);padding:15px 16px;font-family:'Archivo',sans-serif;font-size:14px;width:100%}
-  .order input::placeholder,.order textarea::placeholder{color:#8f8f88}
+  .order .box .btn{margin-top:20px}
+  .order a.plain{color:#fff;text-decoration:underline;text-underline-offset:3px}
+  .order input,.order textarea{background:transparent;border:1px solid rgba(255,255,255,.28);color:#fff;padding:15px 16px;font-family:'Archivo',sans-serif;font-size:14px;width:100%}
+  .order input::placeholder,.order textarea::placeholder{color:#8f99ab}
   .order form{display:grid;gap:12px;margin-top:8px}
 
   .sticky-order{position:fixed;right:20px;bottom:20px;z-index:60;box-shadow:0 8px 24px rgba(0,0,0,.18);opacity:0;pointer-events:none;transform:translateY(10px);transition:opacity .3s ease,transform .3s ease}
   .sticky-order.show{opacity:1;pointer-events:auto;transform:none}
 
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.6,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}.row:hover .pic img{transform:none}}
+
   @media (max-width:900px){
-    .sport-hero .grid,.starter,.order .grid{grid-template-columns:1fr}
-    .why{grid-template-columns:1fr;gap:28px}
+    .vhero .grid{grid-template-columns:1fr;min-height:0}
+    .vhero .photo{order:-1;min-height:0;aspect-ratio:1/1}
+    .vhero .photo::before{background:linear-gradient(0deg,var(--night) 0%,rgba(14,23,38,0) 30%)}
+    .vhero .copy{padding:6vh 5vw 9vh}
+    .scroll-cue{display:none}
     .facts{grid-template-columns:repeat(2,minmax(0,1fr))}
-    .fact{border-right:0;border-bottom:1px solid var(--line);padding:24px 0}
-    .fact + .fact{padding-left:0}
-    .hero-img{max-width:440px}
+    .fact,.fact + .fact{padding:22px 0;border-left:0;border-bottom:1px solid var(--line)}
+    .why{grid-template-columns:1fr;gap:28px}
+    .row{grid-template-columns:1fr;min-height:0}
+    .row .pic{order:0!important;aspect-ratio:4/5}
+    .row .txt{padding:44px 5vw 56px}
+    .kv img{aspect-ratio:4/3;object-position:30% center}
+    .kv .over{position:static;max-width:none;padding:36px 5vw 48px}
+    .also{grid-template-columns:1fr}
+    .starter,.order .grid{grid-template-columns:1fr}
   }
   @media (max-width:520px){
     .facts{grid-template-columns:1fr}
-    .actions .btn{width:100%;text-align:center}
+    .vhero .actions .btn{width:100%;text-align:center}
     .sticky-order{left:16px;right:16px;bottom:16px;text-align:center}
   }
 </style>
@@ -323,20 +370,21 @@
   </div>
 </header>
 
-<section class="sport-hero">
-  <div class="wrap grid">
-    <div>
+<section class="vhero">
+  <div class="grid">
+    <div class="copy">
       <div class="eyebrow">Izipizi Sport · Active Line AW26</div>
       <h1>Sesongen starter nå. <em>Er hyllene klare?</em></h1>
-      <p class="lead">Izipizi Active Line er skibriller, sportsbriller og polariserte solbriller med fransk design og 100&nbsp;% UV-beskyttelse — til en pris kundene sier ja til på stedet. Fra slalåmbakken til seilbåten, for hele familien.</p>
+      <p class="lead">Skibriller, sportsbriller og polariserte solbriller med fransk design og 100&nbsp;% UV-beskyttelse — til en pris kundene sier ja til på stedet. Fra slalåmbakken til seilbåten, for hele familien.</p>
       <div class="actions">
         <a class="btn cobalt" href="https://pro.izipizi.com/en/" target="_blank" rel="noopener" data-umami-event="B2B click" data-umami-event-place="hero">Bestill nå i B2B →</a>
-        <a class="btn ghost" href="#bestill">Ny forhandler? Ta kontakt</a>
+        <a class="btn ghost-light" href="#kolleksjon">Se kolleksjonen</a>
       </div>
+      <div class="scroll-cue">Snow · Glacier · Cliff · Speed · Journey · Horizon · Snow Junior</div>
     </div>
-    <figure class="hero-img">
+    <figure class="photo">
       <img src="/images/izipizi-snow.jpg" alt="Smilende skiløper med Izipizi Snow skibrille i Night Blue på lua" width="1000" height="1003" fetchpriority="high">
-      <figcaption>Snow · Night Blue</figcaption>
+      <span class="tagline">Snow · Night Blue</span>
     </figure>
   </div>
 </section>
@@ -355,61 +403,73 @@
     <div class="label">Hvorfor nå</div>
     <h2>Vinteren selger skibriller. <em>Våren selger polarisert.</em></h2>
     <div class="why">
-      <div><span class="n">01</span><h3>Vintersesongen er rett rundt hjørnet</h3><p>Snow, Glacier og Cliff er laget for bakken, fjellet og påsketuren. Varer på hylla i november og desember treffer både juleshoppingen og vinterferien.</p></div>
-      <div><span class="n">02</span><h3>Et kjøp kunden ikke trenger å tenke lenge på</h3><p>Sportsbriller med polariserte glass og kategori 4-beskyttelse til en pris der kunden gjerne tar to — én til seg selv og én i gave.</p></div>
-      <div><span class="n">03</span><h3>Samme merke kundene allerede kjenner</h3><p>Izipizi er allerede en godt etablert merkevare. Vi fokuserer nå på butikker som tiltrekker seg et aktivt publikum. Stadig flere sportsbutikker er allerede i gang.</p></div>
+      <div class="reveal"><span class="n">01</span><h3>Vintersesongen er rett rundt hjørnet</h3><p>Snow, Glacier og Cliff er laget for bakken, fjellet og påsketuren. Varer på hylla i november og desember treffer både juleshoppingen og vinterferien.</p></div>
+      <div class="reveal"><span class="n">02</span><h3>Et kjøp kunden ikke trenger å tenke lenge på</h3><p>Sportsbriller med polariserte glass og kategori 4-beskyttelse til en pris der kunden gjerne tar to — én til seg selv og én i gave.</p></div>
+      <div class="reveal"><span class="n">03</span><h3>Samme merke kundene allerede kjenner</h3><p>Izipizi er allerede en godt etablert merkevare. Vi fokuserer nå på butikker som tiltrekker seg et aktivt publikum. Stadig flere sportsbutikker er allerede i gang.</p></div>
     </div>
   </div>
 </section>
 
-<section class="section alt" id="kolleksjon">
+<section id="kolleksjon" class="lineup" aria-label="Kolleksjonen" style="scroll-margin-top:64px">
+  <article class="row">
+    <figure class="pic"><img src="/images/izipizi-snow.jpg" alt="Izipizi Snow skibrille i Night Blue" loading="lazy" width="1000" height="1003" style="object-position:40% 30%"><figcaption>Snow · Night Blue</figcaption></figure>
+    <div class="txt reveal">
+      <span class="idx">01</span><div class="tag">Vinter · Skibrille</div>
+      <h3>Snow</h3>
+      <p class="use">Ski og snøbrett — for alle ansikter og alt vær.</p>
+      <ul><li>Dobbel skjerm med ventilasjon mot dugg</li><li>Kan brukes over vanlige briller</li><li>Dobbel silikonstripe som holder stroppen på plass</li><li>Glass i kat. 1, 2 og 3</li></ul>
+      <div class="chips"><span class="chip">Black</span><span class="chip">Night Blue</span><span class="chip">White</span><span class="chip">Kaki Green</span><span class="chip">Pink</span><span class="chip">Orange</span></div>
+    </div>
+  </article>
+  <article class="row">
+    <figure class="pic"><img src="/images/izipizi-glacier.jpg" alt="Izipizi Glacier i Snowflake Lilac med avtakbare sideskjold" loading="lazy" width="880" height="1100" style="object-position:center 25%"><figcaption>Glacier · Snowflake Lilac</figcaption></figure>
+    <div class="txt reveal">
+      <span class="idx">02</span><div class="tag">Vinter · Fjell</div>
+      <h3>Glacier</h3>
+      <p class="use">Ski, toppturer og trail — klassisk breform.</p>
+      <ul><li>Avtakbare sideskjold mot kald vind</li><li>Rette brillestenger (kat. 3) eller bøyde for ekstreme forhold (kat. 4)</li><li>45&nbsp;% biobasert ramme</li></ul>
+      <div class="chips"><span class="chip new">Ny: Snowflake Lilac</span><span class="chip new">Ny: Chrome Glow</span><span class="chip">Black</span><span class="chip">Night Blue</span><span class="chip">Hazel</span><span class="chip">Sand</span></div>
+    </div>
+  </article>
+  <article class="row">
+    <figure class="pic"><img src="/images/izipizi-cliff.jpg" alt="Smilende mann i hettejakke med Izipizi Cliff i Chrome Glow" loading="lazy" width="880" height="1100" style="object-position:center 25%"><figcaption>Cliff · Chrome Glow</figcaption></figure>
+    <div class="txt reveal">
+      <span class="idx">03</span><div class="tag">Vinter · Fjell</div>
+      <h3>Cliff</h3>
+      <p class="use">Fjellbrillen med attitude — like riktig i byen.</p>
+      <ul><li>Avtakbare sideskjold mot kald vind</li><li>All weather kat. 3 eller intense light kat. 4</li><li>45&nbsp;% biobasert ramme</li></ul>
+      <div class="chips"><span class="chip new">Ny: Chrome Glow</span><span class="chip new">Ny: Pine Whisper</span><span class="chip">Black</span><span class="chip">Night Blue</span><span class="chip">Hazel</span><span class="chip">Sand</span></div>
+    </div>
+  </article>
+  <article class="row">
+    <figure class="pic"><img src="/images/izipizi-speed.jpg" alt="Smilende mann med Izipizi Speed i Chrome Glow" loading="lazy" width="880" height="1100" style="object-position:center 25%"><figcaption>Speed · Chrome Glow</figcaption></figure>
+    <div class="txt reveal">
+      <span class="idx">04</span><div class="tag">Fart</div>
+      <h3>Speed</h3>
+      <p class="use">Sykkel, løping og langrenn — ett omsluttende glass.</p>
+      <ul><li>Omsluttende glass som stenger ute vind, sol og regn</li><li>Utvidet perifert syn</li><li>Low light kat. 1 eller all weather kat. 3</li></ul>
+      <div class="chips"><span class="chip new">Ny: Chrome Glow</span><span class="chip new">Ny: Snowflake Lilac</span><span class="chip new">Ny: Pine Whisper</span><span class="chip">Black</span><span class="chip">Night Blue</span><span class="chip">Hazel</span><span class="chip">Sand</span></div>
+    </div>
+  </article>
+</section>
+
+<section class="kv" aria-label="Izipizi Sport">
+  <img src="/images/izipizi-sport-kv.jpg" alt="Izipizi Speed sportsbrille med speilglass — kampanjebilde" loading="lazy" width="1440" height="720">
+  <div class="over reveal">
+    <h2>Fra bakken <em>til byen.</em></h2>
+    <p>Active Line er laget for sport, men brukes hele uka. Det gjør den lett å selge — også i butikker som ikke er sportsbutikker.</p>
+    <a class="btn cobalt" href="https://pro.izipizi.com/en/" target="_blank" rel="noopener" data-umami-event="B2B click" data-umami-event-place="kv">Bestill i B2B →</a>
+  </div>
+</section>
+
+<section class="section alt">
   <div class="wrap">
-    <div class="label">Kolleksjonen</div>
-    <h2>Syv modeller. <em>Én for hver aktivitet.</em></h2>
-    <p class="intro">Alle modeller finnes i Black, Night Blue, Hazel og Sand — Snow også i White, Kaki Green, Pink og Orange. Priser finner du i Izipizi B2B.</p>
-    <div class="models">
-      <article class="model feature">
-        <div class="tag">Vinter · Skibrille</div>
-        <h3>Snow</h3>
-        <p class="use">Ski og snøbrett</p>
-        <ul><li>Dobbel skjerm med ventilasjon mot dugg</li><li>Kan brukes over vanlige briller</li><li>Dobbel silikonstripe som holder stroppen på plass</li><li>Glass i kat. 1, 2 og 3</li></ul>
-      </article>
-      <article class="model">
-        <div class="tag">Vinter · Fjell</div>
-        <h3>Glacier</h3>
-        <p class="use">Ski, toppturer, trail</p>
-        <ul><li>Avtakbare sideskjold mot kald vind</li><li>Rette brillestenger (kat. 3) eller bøyde for ekstreme forhold (kat. 4)</li></ul>
-      </article>
-      <article class="model">
-        <div class="tag">Vinter · Fjell</div>
-        <h3>Cliff</h3>
-        <p class="use">Ski, toppturer, trail</p>
-        <ul><li>Avtakbare sideskjold mot kald vind</li><li>All weather kat. 3 eller intense light kat. 4</li></ul>
-      </article>
-      <article class="model">
-        <div class="tag">Barn · Skibrille</div>
-        <h3>Snow Junior</h3>
-        <p class="use">Ski og snøbrett, 4–10 år</p>
-        <ul><li>Anti-dugg med dobbel skjerm</li><li>Kan brukes over briller</li><li>All weather-glass</li></ul>
-      </article>
-      <article class="model">
-        <div class="tag">Fart</div>
-        <h3>Speed</h3>
-        <p class="use">Sykkel, løping, langrenn</p>
-        <ul><li>Omsluttende glass som stenger ute vind, sol og regn</li><li>Utvidet perifert syn</li><li>Low light kat. 1 eller all weather kat. 3</li></ul>
-      </article>
-      <article class="model">
-        <div class="tag">Utendørs · Polarisert</div>
-        <h3>Journey</h3>
-        <p class="use">Golf, tennis, sandvolleyball</p>
-        <ul><li>Polariserte glass mot gjenskinn</li><li>Godt grep, bredt synsfelt</li><li>Good weather kat. 3</li></ul>
-      </article>
-      <article class="model">
-        <div class="tag">Vann · Polarisert</div>
-        <h3>Horizon</h3>
-        <p class="use">Seiling, padling, strand</p>
-        <ul><li>Saltvannsbestandig belegg på glassene</li><li>Polariserte glass mot gjenskinn</li><li>Good weather kat. 3</li></ul>
-      </article>
+    <div class="label">Også i kolleksjonen</div>
+    <h2>Polarisert til våren. <em>Og en for de minste.</em></h2>
+    <div class="also">
+      <article class="mini reveal"><div class="tag">Barn · Skibrille</div><h3>Snow Junior</h3><p class="use">Ski og snøbrett, 4–10 år</p><ul><li>Anti-dugg med dobbel skjerm</li><li>Kan brukes over briller</li><li>All weather kat. 3</li></ul></article>
+      <article class="mini reveal"><div class="tag">Utendørs · Polarisert</div><h3>Journey</h3><p class="use">Golf, tennis, sandvolleyball</p><ul><li>Polariserte glass mot gjenskinn</li><li>Godt grep, bredt synsfelt</li><li>Good weather kat. 3</li></ul></article>
+      <article class="mini reveal"><div class="tag">Vann · Polarisert</div><h3>Horizon</h3><p class="use">Seiling, padling, strand</p><ul><li>Saltvannsbestandig belegg</li><li>Polariserte glass mot gjenskinn</li><li>Good weather kat. 3</li></ul></article>
     </div>
   </div>
 </section>
@@ -440,7 +500,7 @@
     <div class="label">Kom i gang</div>
     <h2>Et startsortiment for <em>vintersesongen.</em></h2>
     <div class="starter">
-      <div class="pack">
+      <div class="pack reveal">
         <h3>Forslag: Vinterpakken</h3>
         <p class="sub">24 stk — oppfyller minste første ordre</p>
         <table>
@@ -471,7 +531,7 @@
       <div class="box">
         <h3>Eksisterende kunde</h3>
         <p style="margin-top:0">Logg inn i Izipizi B2B og finn Active Line under Sport. Mangler du innlogging, si fra — så ordner vi det.</p>
-        <a class="btn" href="https://pro.izipizi.com/en/" target="_blank" rel="noopener" data-umami-event="B2B click" data-umami-event-place="order-section">Åpne Izipizi B2B →</a>
+        <a class="btn light" href="https://pro.izipizi.com/en/" target="_blank" rel="noopener" data-umami-event="B2B click" data-umami-event-place="order-section">Åpne Izipizi B2B →</a>
       </div>
       <div class="box">
         <h3>Ny forhandler</h3>
@@ -483,7 +543,7 @@
           <input type="email" name="email" placeholder="E-post" required autocomplete="email">
           <input type="tel" name="phone" autocomplete="tel" placeholder="Mobil (valgfritt)">
           <textarea name="message" rows="2" placeholder="Hva slags butikk har du?" style="resize:vertical"></textarea>
-          <button type="submit" class="btn" style="border:none;cursor:pointer;justify-self:start;margin-top:6px">Send meg et forslag</button>
+          <button type="submit" class="btn light" style="border:none;cursor:pointer;justify-self:start;margin-top:6px">Send meg et forslag</button>
           <p class="form-msg" style="display:none;font-size:14px;margin-top:4px"></p>
         </form>
       </div>
@@ -526,8 +586,10 @@ document.getElementById('contactForm_izipizi').addEventListener('submit', async 
   }
 });
 (function(){
-  var s=document.getElementById('stickyOrder'), hero=document.querySelector('.sport-hero'), order=document.getElementById('bestill');
-  if(!('IntersectionObserver' in window)) return;
+  if(!('IntersectionObserver' in window)){document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in');});return;}
+  var ro=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');ro.unobserve(e.target);}});},{threshold:.15});
+  document.querySelectorAll('.reveal').forEach(function(el){ro.observe(el);});
+  var s=document.getElementById('stickyOrder'), hero=document.querySelector('.vhero'), order=document.getElementById('bestill');
   var heroVis=true, orderVis=false;
   function upd(){ s.classList.toggle('show', !heroVis && !orderVis); }
   new IntersectionObserver(function(e){heroVis=e[0].isIntersecting;upd();}).observe(hero);
