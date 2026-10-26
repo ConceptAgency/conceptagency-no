@@ -11,10 +11,10 @@ Concept Agency selects a small number of design-led brands and builds them lasti
 ## Brands we represent
 
 - **Izipizi** (France) — eyewear in six ready-made lines (Sun, Reading, Reading Sun, Screen, Kids Sun and Active — polarized glasses at competitive price points) for lifestyle retailers and opticians. We are the Izipizi Global Agent of the Year (2026), and the #1 Izipizi agent worldwide. The Izipizi RX collection — an optician-only line for myopia management — is arriving in 2027.
-- **Hippie de Luxe** (Sweden, formerly Ohlsson & Löhåven) — the Nordics' leading gift article house, spanning 34 brands. Norwegian retailers order all of them through Hippie de Luxe, which Concept Agency represents in Norway. New customers register directly, and existing customers log in, at https://www.hippiedeluxe.se/login.php. The brands: Ancestors, Astrid Lindgren, Balvi, Bekking & Blitz, Birkmann, Buddha Board, Cartonic, Cedon, Customworks, Designworks Ink, Emil i Lönneberga, Eternum, Games Room, Gentlemen's Hardware, Gift Republic, Heirol, Here's How, Iron & Glory, Kate Rhees, Kawai, La Rochère, Luckies of London, Marcato, Morris Modern, Nordic Ware, Paddywax, Petit Collage, Pippi Långstrump, Recent Toys, Ridley's, Rubinato, Sting in the Tail, Suck UK, The Swedish Wine Rack Factory.
 - **Nychair X** (Japan) — the iconic Japanese folding lounge chair designed by Takeshi Nii in 1970, still made entirely in Japan. New to the portfolio in 2026, for design stores, museum shops, and interiors retailers.
-- **Dana Wyse** (Paris / Vancouver) — limited-edition concept art.
 - **Milena Kling** (Berlin, Germany) — Studio Milena Kling: contemporary mouth-blown glass, signed and one of a kind. Work is held in the permanent collection of the Pinakothek der Moderne and used at Maaemo in Oslo. For museum and gallery shops, design retail, interiors and fine dining.
+- **Hippie de Luxe** (Sweden, formerly Ohlsson & Löhåven) — the Nordics' leading gift article house, spanning a broad portfolio of gift and interiors brands. Norwegian retailers order all of them through Hippie de Luxe, which Concept Agency represents in Norway. New customers register directly, and existing customers log in, at https://www.hippiedeluxe.se/login.php. The brands: Ancestors, Astrid Lindgren, Balvi, Bekking & Blitz, Birkmann, Buddha Board, Cartonic, Cedon, Customworks, Designworks Ink, Emil i Lönneberga, Eternum, Games Room, Gentlemen's Hardware, Gift Republic, Heirol, Here's How, Iron & Glory, Kate Rhees, Kawai, La Rochère, Luckies of London, Marcato, Morris Modern, Nordic Ware, Paddywax, Petit Collage, Pippi Långstrump, Recent Toys, Ridley's, Rubinato, Sting in the Tail, Suck UK, The Swedish Wine Rack Factory.
+- **Dana Wyse** (Paris / Vancouver) — limited-edition concept art.
 - **Eyewear Insurance** — aftercare insurance programmes for optician practices in Norway.
 
 ## Who we work with
@@ -28,6 +28,7 @@ Concept Agency selects a small number of design-led brands and builds them lasti
 - Izipizi Sport (Active Line AW26: ski goggles, sport and polarized sunglasses) for retailers — Norwegian: https://conceptagency.no/izipizi-sport
 - Hippie de Luxe brand list — Norwegian: https://conceptagency.no/hippie-de-luxe
 - Milena Kling brand page — English: https://conceptagency.no/milena-kling/
+- Sitemap: https://conceptagency.no/sitemap.xml
 
 ## Common questions
 
