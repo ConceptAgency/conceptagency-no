@@ -15,6 +15,21 @@
 /sms         /sms.html         200
 /izipizi-sport  /izipizi-sport.html  200
 
+# .html -> clean URL (canonical), forced because the files exist
+/index.html  /  301!
+/milena-kling/index.html  /milena-kling/  301!
+/retail.html  /retail  301!
+/opticians.html  /opticians  301!
+/privacy.html  /privacy  301!
+/consulting.html  /consulting  301!
+/raadgivning.html  /raadgivning  301!
+/optiker.html  /optiker  301!
+/no.html  /no  301!
+/forhandler.html  /forhandler  301!
+/hippie-de-luxe.html  /hippie-de-luxe  301!
+/sms.html  /sms  301!
+/izipizi-sport.html  /izipizi-sport  301!
+
 # Aliases people may type
 /consultancy  /consulting  301
 /advisory     /consulting  301
