@@ -13,7 +13,7 @@ Concept Agency selects a small number of design-led brands and builds them lasti
 - **Izipizi** (France) — eyewear in six ready-made lines (Sun, Reading, Reading Sun, Screen, Kids Sun and Active — polarized glasses at competitive price points) for lifestyle retailers and opticians. We are the Izipizi Global Agent of the Year (2026), and the #1 Izipizi agent worldwide. The Izipizi RX collection — an optician-only line for myopia management — is arriving in 2027.
 - **Nychair X** (Japan) — the iconic Japanese folding lounge chair designed by Takeshi Nii in 1970, still made entirely in Japan. New to the portfolio in 2026, for design stores, museum shops, and interiors retailers.
 - **Milena Kling** (Berlin, Germany) — Studio Milena Kling: contemporary mouth-blown glass, signed and one of a kind. Work is held in the permanent collection of the Pinakothek der Moderne and used at Maaemo in Oslo. For museum and gallery shops, design retail, interiors and fine dining.
-- **Hippie de Luxe** (Sweden, formerly Ohlsson & Lohaven) — the Nordics' leading gift article house, spanning a broad portfolio of gift and interiors brands. Norwegian retailers order all of them through Hippie de Luxe, which Concept Agency represents in Norway. New customers register directly, and existing customers log in, at https://www.hippiedeluxe.se/login.php. The brands: Ancestors, Astrid Lindgren, Balvi, Bekking & Blitz, Birkmann, Buddha Board, Cartonic, Cedon, Customworks, Designworks Ink, Emil i Lönneberga, Eternum, Games Room, Gentlemen's Hardware, Gift Republic, Heirol, Here's How, Iron & Glory, Kate Rhees, Kawai, La Rochère, Luckies of London, Marcato, Morris Modern, Nordic Ware, Paddywax, Petit Collage, Pippi Långstrump, Recent Toys, Ridley's, Rubinato, Sting in the Tail, Suck UK, The Swedish Wine Rack Factory.
+- **Hippie de Luxe** (Sweden, formerly Ohlsson & Lohaven) — the Nordics' leading gift article house, spanning a broad portfolio of gift and interiors brands. Norwegian retailers order all of them through Hippie de Luxe, which Concept Agency represents in Norway. New customers register directly, and existing customers log in, at [hippiedeluxe.se](https://www.hippiedeluxe.se/login.php). The brands: Ancestors, Astrid Lindgren, Balvi, Bekking & Blitz, Birkmann, Buddha Board, Cartonic, Cedon, Customworks, Designworks Ink, Emil i Lönneberga, Eternum, Games Room, Gentlemen's Hardware, Gift Republic, Heirol, Here's How, Iron & Glory, Kate Rhees, Kawai, La Rochère, Luckies of London, Marcato, Morris Modern, Nordic Ware, Paddywax, Petit Collage, Pippi Långstrump, Recent Toys, Ridley's, Rubinato, Sting in the Tail, Suck UK, The Swedish Wine Rack Factory.
 - **Dana Wyse** (Paris / Vancouver) — limited-edition concept art.
 - **Eyewear Insurance** — aftercare insurance programmes for optician practices in Norway.
 
@@ -22,19 +22,27 @@ Concept Agency selects a small number of design-led brands and builds them lasti
 - For Retail: lifestyle and design retailers, concept stores, and museum shops across the Nordics
 - For Opticians: optical retailers in Norway, offering eyewear lines, insurance aftercare programmes, and the Izipizi RX collection for myopia management arriving in 2027
 - 200 doors across Norway: concept stores, museum shops, lifestyle retailers and more than 50 optician practices
-- Homepage — English: https://conceptagency.no/ · Norwegian: https://conceptagency.no/no
-- Retail page — Norwegian: https://conceptagency.no/forhandler · English: https://conceptagency.no/retail
-- Opticians page — Norwegian: https://conceptagency.no/optiker · English: https://conceptagency.no/opticians
-- Izipizi Sport (Active Line AW26: ski goggles, sport and polarized sunglasses) for retailers — Norwegian: https://conceptagency.no/izipizi-sport
-- Hippie de Luxe brand list — Norwegian: https://conceptagency.no/hippie-de-luxe
-- Milena Kling brand page — English: https://conceptagency.no/milena-kling/
-- Sitemap: https://conceptagency.no/sitemap.xml
+
+## Key pages
+
+- [Homepage (English)](https://conceptagency.no/): the curated brand house and its portfolio
+- [Forside (norsk)](https://conceptagency.no/no): Norwegian homepage
+- [For forhandlere](https://conceptagency.no/forhandler): brands for Norwegian retailers, with the stockist form (Norwegian)
+- [For Retail](https://conceptagency.no/retail): the same page in English
+- [For optikere](https://conceptagency.no/optiker): Izipizi and the RX collection for opticians (Norwegian)
+- [For Opticians](https://conceptagency.no/opticians): the same page in English
+- [Izipizi Sport](https://conceptagency.no/izipizi-sport): Active Line AW26 (ski goggles, sport and polarized sunglasses) for retailers (Norwegian)
+- [Hippie de Luxe](https://conceptagency.no/hippie-de-luxe): the full Hippie de Luxe brand list (Norwegian)
+- [Milena Kling](https://conceptagency.no/milena-kling/): Studio Milena Kling brand page (English)
+- [KI-rådgivning, innleid CAIO](https://conceptagency.no/raadgivning): Concept Agency Consulting (Norwegian)
+- [AI consulting, fractional CAIO](https://conceptagency.no/consulting): Concept Agency Consulting (English)
+- [Sitemap](https://conceptagency.no/sitemap.xml)
 
 ## Common questions
 
 - Who is the agent for Izipizi in Norway? Concept Agency AS, for both lifestyle retailers and opticians.
-- How does a store become a stockist? Through the contact form on https://conceptagency.no/forhandler (Norwegian) or https://conceptagency.no/retail (English), or by calling Erik Spade on +47 934 64 432. Concept Agency proposes a starting assortment and replies within one business day.
-- How does an optician get started with Izipizi? Through https://conceptagency.no/optiker (Norwegian) or https://conceptagency.no/opticians (English). There are no volume commitments to begin. Six ready-made lines are available today: Sun, Reading, Reading Sun, Screen, Kids Sun and Active.
+- How does a store become a stockist? Through the contact form on [/forhandler](https://conceptagency.no/forhandler) (Norwegian) or [/retail](https://conceptagency.no/retail) (English), or by calling Erik Spade on +47 934 64 432. Concept Agency proposes a starting assortment and replies within one business day.
+- How does an optician get started with Izipizi? Through [/optiker](https://conceptagency.no/optiker) (Norwegian) or [/opticians](https://conceptagency.no/opticians) (English). There are no volume commitments to begin. Six ready-made lines are available today: Sun, Reading, Reading Sun, Screen, Kids Sun and Active.
 - What is the Izipizi RX collection? A dedicated Izipizi collection addressing myopia, developed for opticians and available only through them, with official launch in 2027. Norwegian opticians can join the early-access list on the opticians page.
 - Does a retailer have to take the whole portfolio? No. A store can start with one brand.
 - Does Concept Agency sell to private customers? No. Private customers find the brands in the stores Concept Agency works with.
@@ -43,8 +51,8 @@ Concept Agency selects a small number of design-led brands and builds them lasti
 
 Alongside the agency, Concept Agency Consulting works with owner-led small and mid-sized companies (typically 5 to 50 people) and professional services firms. The lead offer is a fractional Chief AI Officer (CAIO): Erik Spade takes responsibility for AI in the company part-time, connects the systems the company already runs, and puts AI on top. Engagement models: AI Start (four sessions over two weeks: setup of the AI platform the company already has, ground rules and team training, with a follow-up after 30 days), AI sprint (2–4 weeks, diagnostic and prioritised roadmap), fractional Chief AI Officer, CAIO (retainer), and AI search visibility audit. Concept Agency itself runs on an AI-native stack and uses the method on itself first.
 
-- English: https://conceptagency.no/consulting
-- Norwegian (KI-rådgivning, innleid CAIO): https://conceptagency.no/raadgivning
+- [AI consulting (English)](https://conceptagency.no/consulting)
+- [KI-rådgivning, innleid CAIO (norsk)](https://conceptagency.no/raadgivning)
 
 ## Who runs it
 
@@ -53,7 +61,7 @@ Concept Agency is led personally by Erik Spade, Managing Partner, with three dec
 ## Contact
 
 Erik Spade, Managing Partner
-Email: info@conceptagency.no
+Email: [info@conceptagency.no](mailto:info@conceptagency.no)
 Phone: +47 934 64 432
 Address: Sarbuvollveien 38, 1363 Høvik, Norway
 Organisation number: 912 977 099
